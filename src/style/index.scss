@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+section:nth-of-type(1) {
+  height: 100vh;
+  background: lightblue;
+}
+
+.container-fluid {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@import "navbar/navbar";
+@import "tile/tile";
+@import "footer/footer";
