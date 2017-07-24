@@ -5,7 +5,7 @@ const Header = () =>
     <Navbar>
         <Navbar.Header>
             <Navbar.Brand>
-                <a href="#">React-Bootstrap</a>
+                <a href="#">У діда Віктора</a>
             </Navbar.Brand>
         </Navbar.Header>
         <Nav>
