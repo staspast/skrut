@@ -13,11 +13,11 @@ class App extends Component {
             <div className="App">
                 <Header/>
 
-                <section></section>
+                {/*<section></section>*/}
 
-                <Tile/>
+                {/*<Tile/>*/}
 
-                <Footer/>
+                {/*<Footer/>*/}
 
                 <BrowserRouter>
                     <div>

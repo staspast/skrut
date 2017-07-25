@@ -2,8 +2,8 @@ import React from 'react';
 import { Navbar, NavItem, Nav } from  'react-bootstrap';
 
 const Header = () =>
-    <Navbar fixedTop fluid collapseOnSelect>
-
+    <Navbar >
+        {/*fixedTop fluid collapseOnSelect*/}
         <Navbar.Header>
             <Navbar.Brand>
                 <a href="#">У діда Віктора</a>
