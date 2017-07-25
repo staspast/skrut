@@ -1,4 +1,19 @@
 .navbar-default {
-  background: #fff;
   padding: 5px;
+
+  @media(min-width: 768px) {
+    background: transparent;
+  }
+
+  .navbar-brand {
+    @media(min-width: 768px) {
+      color: #fff;
+    }
+  }
+
+  .navbar-nav > li > a {
+    @media(min-width: 768px) {
+      color: #fff;
+    }
+  }
 }
