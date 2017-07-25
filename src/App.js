@@ -4,6 +4,7 @@ import Header from './components/navbar/Navbar';
 import Contact from './components/contact/Contact';
 import Tile from './components/tile/Tile';
 import Footer from './components/footer/Footer';
+import Video from './components/video/Video';
 
 import './App.css';
 
@@ -13,7 +14,18 @@ class App extends Component {
             <div className="App">
                 <Header/>
 
-                <section></section>
+                <section>
+                    <div className="title">
+                        <h1>
+                            Lorem Ipsum is simply
+                        </h1>
+                        <h2>
+                            text of the printing and typesetting industry.
+                        </h2>
+                    </div>
+
+                    <Video/>
+                </section>
 
                 <Tile/>
 

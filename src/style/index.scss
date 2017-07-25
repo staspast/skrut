@@ -12,7 +12,44 @@ body {
 
 section:nth-of-type(1) {
   height: 100vh;
-  background: lightblue;
+  background: rgba(0, 0, 0, 0.6);
+  position: relative;
+  overflow: hidden;
+
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .title {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+
+    h1 {
+      font-size: 36px;
+
+      @media(min-width: 768px) {
+        font-size: 56px;
+      }
+    }
+
+    h2 {
+      font-size: 22px;
+
+      @media(min-width: 768px) {
+        font-size: 36px;
+      }
+    }
+  }
 }
 
 .container-fluid {
