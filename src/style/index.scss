@@ -58,6 +58,17 @@ section:nth-of-type(1) {
   margin: 0 auto;
 }
 
+a {
+  display: block;
+  color: #000;
+
+  &:hover {
+    color: #000;
+    text-decoration: none;
+  }
+}
+
 @import "navbar/navbar";
 @import "tile/tile";
 @import "footer/footer";
+@import "popover/popover";

@@ -1,28 +1,48 @@
 import React from 'react';
-import { Navbar, NavItem, Nav } from  'react-bootstrap';
+import PopoverPhone from '../popover/Popover';
+import ImagePhoneCall from '../../images/phone-call.svg';
+import { Navbar, NavItem, NavDropdown, MenuItem, Nav, OverlayTrigger } from  'react-bootstrap';
 
-const Header = () =>
-    <Navbar fixedTop fluid collapseOnSelect>
+const NavigationBar = () =>
+    <Navbar fixedTop fluid inverse>
 
         <Navbar.Header>
             <Navbar.Brand>
-                <a href="#">У діда Віктора</a>
+                <a href="/">У діда Віктора</a>
             </Navbar.Brand>
 
             <Navbar.Toggle />
         </Navbar.Header>
 
         <Navbar.Collapse>
-            <Nav>
-                <NavItem eventKey={1} href="/contact">Contact</NavItem>
-                <NavItem eventKey={2} href="#">Link</NavItem>
-            </Nav>
-            
             <Nav pullRight>
-                <NavItem eventKey={1} href="tel:+38 096 355 28 25">+38 096 355 28 25</NavItem>
+                <NavItem eventKey={1} href="/about-us">About Us</NavItem>
+                <NavItem eventKey={2} href="/offers">Offers</NavItem>
+                <NavItem eventKey={3} href="/gallery">Gallery</NavItem>
+                <NavItem eventKey={4} href="/contact">Contact</NavItem>
+
+                <NavItem>|</NavItem>
+
+                <NavDropdown eventKey={5}  title="UKR">
+                    <MenuItem>ENG</MenuItem>
+                    <MenuItem>POL</MenuItem>
+                    <MenuItem>RUS</MenuItem>
+                </NavDropdown>
+
+                <OverlayTrigger
+                    rootClose
+                    trigger="click"
+                    placement="bottom"
+                    overlay={ PopoverPhone }
+                >
+                    <NavItem eventKey={6}>
+                        <img src={ ImagePhoneCall } alt="" width="20"/>
+                    </NavItem>
+                </OverlayTrigger>
+
             </Nav>
         </Navbar.Collapse>
 
     </Navbar>;
 
-export default Header;
+export default NavigationBar;

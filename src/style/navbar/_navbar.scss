@@ -1,19 +1,29 @@
-.navbar-default {
+.navbar {
   padding: 5px;
-
-  @media(min-width: 768px) {
-    background: transparent;
-  }
+  background: rgba(0,0,0, 0.8);
 
   .navbar-brand {
-    @media(min-width: 768px) {
-      color: #fff;
-    }
+    color: #fff;
   }
 
   .navbar-nav > li > a {
-    @media(min-width: 768px) {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+
+    &:hover, &:active {
       color: #fff;
     }
+
+    img {
+      position: relative;
+      bottom: 2px;
+    }
   }
+}
+
+.navbar-nav>li>.dropdown-menu {
+  min-width: 75px;
+  border: none;
 }
