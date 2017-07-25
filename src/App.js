@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import NavigationBar from './components/navbar/Navbar';
-import Home from './components/home/Home';
-import AboutUs from './components/about-us/AboutUs';
-import Offers from './components/offers/Offers';
-import Contact from './components/contact/Contact';
-import Footer from './components/footer/Footer';
+import NavigationBar from './components/Navbar';
+import Home from './components/Home';
+import AboutUs from './components/AboutUs';
+import Offers from './components/Offers';
+import Contact from './containers/Contact';
+import Footer from './components/Footer';
 import './App.css';
 
 class App extends Component {

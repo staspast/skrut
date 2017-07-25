@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Url from '../../images/Mountain_Waterfall.mp4';
+import Url from '../images/Mountain_Waterfall.mp4';
 
 class Video extends Component {
     render () {

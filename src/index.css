@@ -56,20 +56,30 @@ a {
   background: rgba(0, 0, 0, 0.8); }
   .navbar .navbar-brand {
     color: #fff; }
-  .navbar .navbar-nav > li > a {
-    box-sizing: border-box;
-    font-size: 16px;
-    font-weight: 300;
-    color: #fff; }
-    .navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:active {
+  .navbar .navbar-nav > li {
+    padding: 7px 0; }
+    .navbar .navbar-nav > li > a {
+      padding: 7px 15px;
+      box-sizing: border-box;
+      font-size: 16px;
+      font-weight: 300;
       color: #fff; }
-    .navbar .navbar-nav > li > a img {
-      position: relative;
-      bottom: 2px; }
+      .navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:active {
+        color: #fff;
+        padding: 6px 14px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 3px; }
+      .navbar .navbar-nav > li > a img {
+        position: relative;
+        bottom: 2px; }
 
 .navbar-nav > li > .dropdown-menu {
   min-width: 75px;
-  border: none; }
+  background: rgba(0, 0, 0, 0.8); }
+  .navbar-nav > li > .dropdown-menu > li > a {
+    color: #fff; }
+    .navbar-nav > li > .dropdown-menu > li > a:hover {
+      background: transparent; }
 
 .tile-wrapper {
   color: #fff;

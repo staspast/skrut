@@ -1,7 +1,7 @@
 import React from 'react';
-import PopoverPhone from '../popover/Popover';
-import ImagePhoneCall from '../../images/phone-call.svg';
 import { Navbar, NavItem, NavDropdown, MenuItem, Nav, OverlayTrigger } from  'react-bootstrap';
+import PopoverPhone from './Popover';
+import ImagePhoneCall from '../images/phone-call.svg';
 
 const NavigationBar = () =>
     <Navbar fixedTop fluid inverse>
@@ -23,7 +23,7 @@ const NavigationBar = () =>
 
                 <NavItem>|</NavItem>
 
-                <NavDropdown eventKey={5}  title="UKR">
+                <NavDropdown eventKey={5}  title="UKR" id="dropdown">
                     <MenuItem>ENG</MenuItem>
                     <MenuItem>POL</MenuItem>
                     <MenuItem>RUS</MenuItem>

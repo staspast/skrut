@@ -1,6 +1,6 @@
 import React from 'react';
-import Tile from '../tile/Tile';
-import Video from '../video/Video';
+import Tile from './Tile';
+import Video from './Video';
 
 const Home = () =>
     <div>
