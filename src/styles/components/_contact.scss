@@ -1,0 +1,53 @@
+.contact {
+
+  .container {
+    margin-bottom: 15px;
+  }
+
+  &-title {
+    font-size: 34px;
+    line-height: 1;
+
+    &:after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 60px;
+      background: black;
+      margin: 10px auto 0;
+    }
+  }
+
+  .form-control {
+    border: 1px solid #e7e7e7;
+    box-shadow: none;
+    border-radius: 2px;
+    font-size: 12px;
+  }
+
+  textarea.form-control {
+    resize: none;
+    line-height: 20px;
+    height: 95px;
+  }
+}
+
+.form {
+
+  &-title {
+    font-weight: 500;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  button {
+    font-size: 12px;
+    border-radius: 0;
+    border: 1px solid #e7e7e7;
+
+    &:disabled {
+      background-color: #e7e7e7;
+    }
+  }
+}

@@ -4,7 +4,7 @@ import PopoverPhone from './Popover';
 import ImagePhoneCall from '../images/phone-call.svg';
 
 const NavigationBar = () =>
-    <Navbar fixedTop fluid inverse>
+    <Navbar fluid inverse>
 
         <Navbar.Header>
             <Navbar.Brand>

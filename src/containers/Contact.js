@@ -1,5 +1,7 @@
-import React, {Component} from 'react'
-import {FormGroup, ControlLabel, FormControl, Row, Button} from  'react-bootstrap'
+import React, { Component } from 'react'
+import { Grid, FormGroup, FormControl, Row, Col, Button } from  'react-bootstrap'
+import Header from  '../components/Header';
+import SimpleMapExample from '../containers/Map';
 
 class Contact extends Component {
     constructor() {
@@ -7,6 +9,8 @@ class Contact extends Component {
 
         this.state = {
             name: '',
+            surname: '',
+            phone: '',
             email: '',
             message: '',
             nameValid: false,
@@ -30,22 +34,32 @@ class Contact extends Component {
     };
 
     handleNameChange = (event) => {
-        this.setState({name: event.target.value})
+        this.setState({ name: event.target.value })
+    };
+
+    handleSurnameChange = (event) => {
+        this.setState({ surname: event.target.value })
+    };
+
+    handlePhoneChange = (event) => {
+        this.setState({ phone: event.target.value })
     };
 
     handleEmailChange = (event) => {
-        this.setState({email: event.target.value})
+        this.setState({ email: event.target.value })
     };
 
     handleMessageChange = (event) => {
-        this.setState({message: event.target.value})
+        this.setState({ message: event.target.value })
     };
 
     sendEmail = (e) => {
         fetch('https://script.google.com/macros/s/AKfycbwcAOuP_lwPBboegRx3dJouQVAdtGQVmL1N28AgO_pKePIsWYTX/exec?name=' +
             this.state.name + '&mail=' +
+            this.state.surname + '&surname=' +
+            this.state.phone + '&phone=' +
             this.state.email + '&message=' +
-            this.state.message, {method: 'GET'})
+            this.state.message, { method: 'GET' })
             .then((res) => {
                 console.log(res)
             });
@@ -55,50 +69,108 @@ class Contact extends Component {
 
     render() {
         return (
-            <Row>
-                <form onSubmit={this.sendEmail}>
-                    <FormGroup
-                        controlId="nameText"
-                    >
-                        <ControlLabel>Name</ControlLabel>
-                        <FormControl
-                            className={this.validateNotEmpty(this.state.name) ? '' : 'has-error'}
-                            type="text"
-                            placeholder="Name"
-                            value={this.state.name}
-                            onChange={this.handleNameChange}
-                        />
-                    </FormGroup>
+            <div className="contact">
+                <Header/>
 
-                    <FormGroup
-                        controlId="emailText"
-                    >
-                        <ControlLabel>Email</ControlLabel>
-                        <FormControl
-                            className={this.validateEmail(this.state.name) ? '' : 'has-error'}
-                            type="email"
-                            placeholder="Email"
-                            value={this.state.email}
-                            onChange={this.handleEmailChange}
-                        />
-                    </FormGroup>
+                <Grid>
+                    <Row>
+                        <Col md={6}>
+                            <div className="contact-title">Contact</div>
+                            <h3>"У діда Віктора"</h3>
+                            <div className="contact-address">вул. Хоткевича 5/2, м. Яремче , Ів-Франківська обл.</div>
+                            <div className="contact-phone">
+                                <div>+38 096 355 28 25</div>
+                                <div>+38 063 461 06 99</div>
+                                <div>+38 095 436 31 45</div>
+                            </div>
 
-                    <FormGroup
-                        controlId="messageText"
-                    >
-                        <ControlLabel>Message</ControlLabel>
-                        <FormControl
-                            className={this.validateNotEmpty(this.state.message) ? '' : 'has-error'}
-                            componentClass="textarea"
-                            placeholder="Message"
-                            value={this.state.message}
-                            onChange={this.handleMessageChange}
-                        />
-                    </FormGroup>
+                            <a href="mailto:skrut@online.ua">skrut@online.ua</a>
+                        </Col>
 
-                    <Button disabled={!this.inputsValid()} type="submit">Submit</Button>
-                </form>
-            </Row>
+                        <Col md={6} className="form">
+                            <div className="form-title">Contact form</div>
+
+                            <form onSubmit={ this.sendEmail }>
+
+                                <Row>
+                                    <Col xs={6}>
+                                        <FormGroup controlId="nameText">
+                                            <FormControl
+                                                className={ this.validateNotEmpty(this.state.name) ? '' : 'has-error' }
+                                                type="text"
+                                                placeholder="Name"
+                                                value={ this.state.name }
+                                                onChange={ this.handleNameChange }
+                                            />
+                                        </FormGroup>
+                                    </Col>
+
+                                    <Col xs={6}>
+                                        <FormGroup controlId="surnameText">
+
+                                            <FormControl
+                                                className={ this.validateEmail(this.state.surname) ? '' : 'has-error' }
+                                                type="text"
+                                                placeholder="Surname"
+                                                value={ this.state.surname }
+                                                onChange={ this.handleSurnameChange }
+                                            />
+                                        </FormGroup>
+
+                                    </Col>
+
+                                    <Col xs={6}>
+                                        <FormGroup controlId="phoneText">
+
+                                            <FormControl
+                                                className={ this.validateNotEmpty(this.state.phone) ? '' : 'has-error' }
+                                                type="text"
+                                                placeholder="Phone"
+                                                value={ this.state.phone }
+                                                onChange={ this.handlePhoneChange }
+                                            />
+                                        </FormGroup>
+                                    </Col>
+
+                                    <Col xs={6}>
+                                        <FormGroup controlId="emailText">
+                                            <FormControl
+                                                className={ this.validateEmail(this.state.name) ? '' : 'has-error' }
+                                                type="email"
+                                                placeholder="Email"
+                                                value={ this.state.email }
+                                                onChange={ this.handleEmailChange }
+                                            />
+                                        </FormGroup>
+                                    </Col>
+
+                                    <Col xs={12}>
+                                        <FormGroup controlId="messageText">
+                                            <FormControl
+                                                className={ this.validateNotEmpty(this.state.message) ? '' : 'has-error' }
+                                                componentClass="textarea"
+                                                placeholder="Message"
+                                                value={ this.state.message }
+                                                onChange={ this.handleMessageChange }
+                                            />
+                                        </FormGroup>
+                                    </Col>
+                                </Row>
+                            </form>
+
+                            <Button
+                                className="pull-right"
+                                disabled={ !this.inputsValid() }
+                                type="submit"
+                            >
+                                Submit
+                            </Button>
+                        </Col>
+                    </Row>
+                </Grid>
+
+                <SimpleMapExample/>
+            </div>
         )
     }
 }

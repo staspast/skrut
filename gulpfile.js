@@ -1,7 +1,7 @@
 'use strict';
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
+let gulp = require('gulp');
+let sass = require('gulp-sass');
 
 gulp.task('styles', function () {
     return gulp.src('./src/styles/**/*.scss')
@@ -10,7 +10,7 @@ gulp.task('styles', function () {
 });
 
 gulp.task('styles-watch', function() {
-    gulp.watch('./src/styles/**/*.scss', ['style']);
+    gulp.watch('./src/styles/**/*.scss', ['styles']);
 });
 
 gulp.task('default', ['styles', 'styles-watch']);
