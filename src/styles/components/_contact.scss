@@ -1,22 +1,41 @@
 .contact {
+  text-align: left;
 
   .container {
     margin-bottom: 15px;
   }
 
-  &-title {
-    font-size: 34px;
-    line-height: 1;
+  .title {
+    font-weight: 500;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 10px;
+  }
 
-    &:after {
-      content: '';
-      display: block;
-      height: 2px;
-      width: 60px;
-      background: black;
-      margin: 10px auto 0;
+  &-information {
+    line-height: 22px;
+
+    a {
+      display: inline-block;
     }
   }
+
+  &-address {
+    margin-bottom: 6px;
+
+    div {
+      margin-bottom: 6px;
+    }
+  }
+
+  &-phone {
+    margin-bottom: 6px;
+
+    div {
+      margin-bottom: 6px;
+    }
+  }
+
 
   .form-control {
     border: 1px solid #e7e7e7;
@@ -28,18 +47,11 @@
   textarea.form-control {
     resize: none;
     line-height: 20px;
-    height: 95px;
+    height: 160px;
   }
 }
 
 .form {
-
-  &-title {
-    font-weight: 500;
-    font-size: 20px;
-    text-align: left;
-    margin-bottom: 10px;
-  }
 
   button {
     font-size: 12px;

@@ -75,20 +75,50 @@ class Contact extends Component {
                 <Grid>
                     <Row>
                         <Col md={6}>
-                            <div className="contact-title">Contact</div>
-                            <h3>"У діда Віктора"</h3>
-                            <div className="contact-address">вул. Хоткевича 5/2, м. Яремче , Ів-Франківська обл.</div>
-                            <div className="contact-phone">
-                                <div>+38 096 355 28 25</div>
-                                <div>+38 063 461 06 99</div>
-                                <div>+38 095 436 31 45</div>
+                            <div className="title">Contact</div>
+
+                            <div className="contact-information">
+                                <span>Jeśli masz pytania odnośnie współpracy lub chcesz przesłać zapytanie ofertowe, napisz do nas na </span>
+                                <a href="mailto:skrut@online.ua">skrut@online.ua</a>
+                                <span> lub wypełnij  formularz kontaktowy. Skontaktujemy się z Tobą tak szybko, jak to możliwe.</span>
                             </div>
 
-                            <a href="mailto:skrut@online.ua">skrut@online.ua</a>
+                            <h4>Садиба "У діда Віктора"</h4>
+
+                            <Row className="contact-address">
+                                <Col xs={4}>
+                                    Address:
+                                </Col>
+                                <Col xs={8}>
+                                    <div>вул. Хоткевича 5/2,</div>
+                                    <div>м. Яремче,</div>
+                                    <div>Ів-Франківська обл.</div>
+                                </Col>
+                            </Row>
+
+                            <Row className="contact-phone">
+                                <Col xs={4}>
+                                    Phone:
+                                </Col>
+                                <Col xs={8}>
+                                    <div>+38 096 355 28 25</div>
+                                    <div>+38 063 461 06 99</div>
+                                    <div>+38 095 436 31 45</div>
+                                </Col>
+                            </Row>
+
+                            <Row className="contact-phone">
+                                <Col xs={4}>
+                                    E-mail:
+                                </Col>
+                                <Col xs={8}>
+                                    <a href="mailto:skrut@online.ua">skrut@online.ua</a>
+                                </Col>
+                            </Row>
                         </Col>
 
                         <Col md={6} className="form">
-                            <div className="form-title">Contact form</div>
+                            <div className="title">Contact form</div>
 
                             <form onSubmit={ this.sendEmail }>
 

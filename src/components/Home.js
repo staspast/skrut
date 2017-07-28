@@ -4,8 +4,8 @@ import Video from './Video';
 
 const Home = () =>
     <div>
-        <section>
-            <div className="title">
+        <section className="background">
+            <div className="header-title">
                 <h1>
                     Lorem Ipsum is simply
                 </h1>

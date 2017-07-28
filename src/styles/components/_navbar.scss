@@ -1,6 +1,6 @@
 .navbar {
   padding: 5px;
-  background: rgba(0, 0, 0, 0.8);
+  background: #000;
 
   .navbar-brand {
     color: #fff;
@@ -8,6 +8,11 @@
 
   .navbar-nav > li {
     padding: 7px 0;
+
+    &:nth-of-type(5) > a:hover {
+      cursor: default;
+      border-color: transparent;
+    }
 
     & > a {
       padding: 7px 15px;
@@ -35,7 +40,7 @@
   min-width: 75px;
   background: rgba(0,0,0, 0.8);
   
-  & > li > a {
+  & > li & > a {
     color: #fff;
 
     &:hover {
