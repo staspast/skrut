@@ -50,7 +50,12 @@ class LightboxGallery extends Component {
 
     getThumbnailContent = (item) => {
         return (
-            <img src={ item.thumbnail }/>
+            <div>
+                <img src={ item.thumbnail }/>
+                <div className="plug">
+                    test
+                </div>
+            </div>
         );
     };
 

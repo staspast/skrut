@@ -1,48 +1,75 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Navbar, NavItem, NavDropdown, MenuItem, Nav, OverlayTrigger } from  'react-bootstrap';
 import PopoverPhone from './Popover';
 import ImagePhoneCall from '../images/phone-call.svg';
 
-const NavigationBar = () =>
-    <Navbar fluid inverse>
+class NavigationBar extends Component {
+    constructor(props) {
+        super(props);
 
-        <Navbar.Header>
-            <Navbar.Brand>
-                <a href="/">У діда Віктора</a>
-            </Navbar.Brand>
+        this.state = {
+            isTop: true
+        }
+    };
 
-            <Navbar.Toggle />
-        </Navbar.Header>
+    // componentDidMount() {
+    //     window.addEventListener('scroll', this.handleScroll);
+    // };
+    //
+    // componentWillUnmount() {
+    //     window.removeEventListener('scroll', this.handleScroll);
+    // };
+    //
+    //
+    // handleScroll = () => {
+    //     this.setState({ isTop: window.scrollY < 100});
+    // };
+    // onScroll={this.handleScroll}
 
-        <Navbar.Collapse>
-            <Nav pullRight>
-                <NavItem eventKey={1} href="/about-us">About Us</NavItem>
-                <NavItem eventKey={2} href="/offers">Offers</NavItem>
-                <NavItem eventKey={3} href="/gallery">Gallery</NavItem>
-                <NavItem eventKey={4} href="/contact">Contact</NavItem>
+    render() {
+        return (
+            <Navbar fluid inverse fixedTop>
 
-                <NavItem>|</NavItem>
+                <Navbar.Header>
+                    <Navbar.Brand>
+                        <a href="/">У діда Віктора</a>
+                    </Navbar.Brand>
 
-                <NavDropdown eventKey={5}  title="UKR" id="dropdown">
-                    <MenuItem>ENG</MenuItem>
-                    <MenuItem>POL</MenuItem>
-                    <MenuItem>RUS</MenuItem>
-                </NavDropdown>
+                    <Navbar.Toggle />
+                </Navbar.Header>
 
-                <OverlayTrigger
-                    rootClose
-                    trigger="click"
-                    placement="bottom"
-                    overlay={ PopoverPhone }
-                >
-                    <NavItem eventKey={6}>
-                        <img src={ ImagePhoneCall } alt="" width="20"/>
-                    </NavItem>
-                </OverlayTrigger>
+                <Navbar.Collapse>
+                    <Nav pullRight>
+                        <NavItem eventKey={1} href="/about-us">About Us</NavItem>
+                        <NavItem eventKey={2} href="/offers">Offers</NavItem>
+                        <NavItem eventKey={3} href="/gallery">Gallery</NavItem>
+                        <NavItem eventKey={4} href="/contact">Contact</NavItem>
 
-            </Nav>
-        </Navbar.Collapse>
+                        <NavItem>|</NavItem>
 
-    </Navbar>;
+                        <NavDropdown eventKey={5}  title="UKR" id="dropdown">
+                            <MenuItem>ENG</MenuItem>
+                            <MenuItem>POL</MenuItem>
+                            <MenuItem>RUS</MenuItem>
+                        </NavDropdown>
+
+                        <OverlayTrigger
+                            rootClose
+                            trigger="click"
+                            placement="bottom"
+                            overlay={ PopoverPhone }
+                        >
+                            <NavItem eventKey={6}>
+                                <img src={ ImagePhoneCall } alt="" width="20"/>
+                            </NavItem>
+                        </OverlayTrigger>
+
+                    </Nav>
+                </Navbar.Collapse>
+
+            </Navbar>
+        );
+    }
+}
 
 export default NavigationBar;

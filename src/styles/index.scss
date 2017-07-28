@@ -74,7 +74,12 @@ a {
 @import "components/tile";
 @import "components/footer";
 @import "components/popover";
+@import "components/offers";
 @import "components/contact";
+@import "components/gallery";
+
+//
+@import "components/lightbox";
 
 //vendor
 @import "../node_modules/react-photoswipe/dist/photoswipe.css";
