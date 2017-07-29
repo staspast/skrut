@@ -8,7 +8,7 @@ import StyleMap from "../constants/StyleMap.json";
 const StyledMapExampleGoogleMap = withGoogleMap(props => (
     <GoogleMap
         defaultZoom={5}
-        defaultCenter={props.center}
+        defaultCenter={ props.center }
         defaultOptions={{ styles: StyleMap }}
     >
         <InfoBox
@@ -45,8 +45,8 @@ export default class StyledMapExample extends Component {
                 mapElement={
                     <div style={{ height: `400px` }} />
                 }
-                center={new google.maps.LatLng(25.03, 121.6)}
-                onClickFromChildrenOfInfoBox={this.handleClickFromChildrenOfInfoBox}
+                center={ new google.maps.LatLng(25.03, 121.6) }
+                onClickFromChildrenOfInfoBox={ this.handleClickFromChildrenOfInfoBox }
             />
         );
     }

@@ -2,13 +2,14 @@ import React from 'react';
 import { Grid, Row, Col, Tab, Tabs } from  'react-bootstrap';
 import Header from  './Header';
 import LightboxGallery from '../containers/LightboxGallery';
+import { GalleryItems } from "../constants/Images.js";
 
 const Offers = () =>
     <div className="offers">
         <Header/>
 
         <Grid>
-            <Tabs defaultActiveKey={1}>
+            <Tabs defaultActiveKey={1} id="offers-tabs">
                 <Tab eventKey={1} title="Перший номер">
                     <Row>
                         <Col md={5}>
@@ -28,7 +29,7 @@ const Offers = () =>
                         </Col>
 
                         <Col md={7}>
-                            <LightboxGallery/>
+                            <LightboxGallery images={ GalleryItems }/>
                         </Col>
                     </Row>
                 </Tab>
@@ -51,7 +52,7 @@ const Offers = () =>
                         </Col>
 
                         <Col md={7}>
-                            <LightboxGallery/>
+                            <LightboxGallery images={ GalleryItems }/>
                         </Col>
                     </Row>
                 </Tab>

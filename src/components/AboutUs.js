@@ -1,8 +1,9 @@
 import React from 'react';
-import { Grid, Row, Col } from  'react-bootstrap';
+import Header from  './Header';
 
 const AboutUs = () =>
-    <div>
+    <div className="about-us">
+        <Header/>
         <div>Запрошуємо на відпочинок у Карпати.</div>
 
         <div>Ви бажаєте побувати на природі одночасно не втрачаючи комфорту - завітайте до нас. Ми не конкуруємо ні по набору пропозицій ні по ціні: баланс надто поміркованої вартості з хорошими умовами - це те, на що Ви можете розраховувати.</div>

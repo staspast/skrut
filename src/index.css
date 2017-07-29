@@ -177,6 +177,12 @@ footer {
     .offers .pswp-thumbnail:first-child {
       width: 75%; } }
 
+.offers .nav-tabs > li {
+  width: 50%; }
+
+.offers .tab-content {
+  margin-top: 20px; }
+
 .contact {
   text-align: left;
   line-height: 22px; }
@@ -211,7 +217,8 @@ footer {
     background-color: #e7e7e7; }
 
 .gallery .pswp-thumbnail {
-  width: 25%; }
+  width: 25%;
+  border: 2px solid #fff; }
 
 video {
   position: absolute;
