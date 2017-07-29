@@ -167,14 +167,15 @@ footer {
 .offers .pswp-thumbnail {
   width: 50%;
   border: 2px solid #fff; }
-  @media (max-width: 992px) {
+  @media (min-width: 768px) {
     .offers .pswp-thumbnail {
       width: 25%; } }
-  .offers .pswp-thumbnail:first-child {
-    width: 100%; }
-    @media (max-width: 992px) {
-      .offers .pswp-thumbnail:first-child {
-        width: 50%; } }
+  @media (min-width: 768px) {
+    .offers .pswp-thumbnail:first-child {
+      width: 50%; } }
+  @media (min-width: 992px) {
+    .offers .pswp-thumbnail:first-child {
+      width: 75%; } }
 
 .contact {
   text-align: left;
