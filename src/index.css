@@ -25,6 +25,8 @@ a {
 .navbar {
   padding: 5px;
   background: #000; }
+  .navbar-component {
+    margin-top: 61px; }
   .navbar .navbar-brand {
     color: #fff; }
   .navbar .navbar-nav > li {
@@ -48,11 +50,16 @@ a {
         bottom: 2px; }
 
 .navbar-nav > li > .dropdown-menu {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
   min-width: 75px;
-  background: rgba(0, 0, 0, 0.8); }
-  .navbar-nav > li > .dropdown-menu > li .navbar-nav > li > .dropdown-menu > a {
-    color: #fff; }
-    .navbar-nav > li > .dropdown-menu > li .navbar-nav > li > .dropdown-menu > a:hover {
+  background: #000; }
+  .navbar-nav > li > .dropdown-menu > li > a {
+    color: #7a7a7a;
+    font-weight: 300;
+    font-size: 16px; }
+    .navbar-nav > li > .dropdown-menu > li > a:hover {
+      color: #fff;
       background: transparent; }
 
 header {
@@ -72,28 +79,30 @@ header {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6); }
-  header .header-title {
-    z-index: 1;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #fff; }
-    header .header-title h1 {
-      font-size: 36px; }
-      @media (min-width: 768px) {
-        header .header-title h1 {
-          font-size: 56px; } }
-    header .header-title h2 {
-      font-size: 22px; }
-      @media (min-width: 768px) {
-        header .header-title h2 {
-          font-size: 36px; } }
 
 .background {
   height: 100vh;
   background: rgba(0, 0, 0, 0.6);
   position: relative;
   overflow: hidden; }
+
+.header-title {
+  z-index: 1;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  margin-top: -60px; }
+  .header-title h1 {
+    font-size: 36px; }
+    @media (min-width: 768px) {
+      .header-title h1 {
+        font-size: 56px; } }
+  .header-title h2 {
+    font-size: 22px; }
+    @media (min-width: 768px) {
+      .header-title h2 {
+        font-size: 36px; } }
 
 .tile-wrapper {
   color: #fff;
@@ -145,6 +154,12 @@ footer {
   background: rgba(0, 0, 0, 0.8);
   border-top: 1px solid #e7e7e7; }
 
+.popover-phone {
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.5); }
+  .popover-phone a {
+    color: #fff; }
+
 .offers-title {
   font-size: 40px;
   line-height: 46px; }
@@ -162,7 +177,8 @@ footer {
         width: 50%; } }
 
 .contact {
-  text-align: left; }
+  text-align: left;
+  line-height: 22px; }
   .contact .container {
     margin-bottom: 15px; }
   .contact .title {
@@ -170,18 +186,12 @@ footer {
     font-size: 20px;
     text-align: left;
     margin-bottom: 10px; }
-  .contact-information {
-    line-height: 22px; }
-    .contact-information a {
-      display: inline-block; }
+  .contact-information a {
+    display: inline-block; }
   .contact-address {
-    margin-bottom: 6px; }
-    .contact-address div {
-      margin-bottom: 6px; }
+    margin-bottom: 10px; }
   .contact-phone {
-    margin-bottom: 6px; }
-    .contact-phone div {
-      margin-bottom: 6px; }
+    margin-bottom: 10px; }
   .contact .form-control {
     border: 1px solid #e7e7e7;
     box-shadow: none;

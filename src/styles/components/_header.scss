@@ -17,30 +17,6 @@ header {
     height: 100%;
     background:rgba(0,0,0,.6);
   }
-
-  .header-title {
-    z-index:1;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #fff;
-
-    h1 {
-      font-size: 36px;
-
-      @media(min-width: 768px) {
-        font-size: 56px;
-      }
-    }
-
-    h2 {
-      font-size: 22px;
-
-      @media(min-width: 768px) {
-        font-size: 36px;
-      }
-    }
-  }
 }
 
 .background {
@@ -48,4 +24,29 @@ header {
   background: rgba(0, 0, 0, 0.6);
   position: relative;
   overflow: hidden;
+}
+
+.header-title {
+  z-index:1;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  margin-top: -60px;
+
+  h1 {
+    font-size: 36px;
+
+    @media(min-width: 768px) {
+      font-size: 56px;
+    }
+  }
+
+  h2 {
+    font-size: 22px;
+
+    @media(min-width: 768px) {
+      font-size: 36px;
+    }
+  }
 }

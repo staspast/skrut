@@ -1,5 +1,6 @@
 .contact {
   text-align: left;
+  line-height: 22px;
 
   .container {
     margin-bottom: 15px;
@@ -12,28 +13,16 @@
     margin-bottom: 10px;
   }
 
-  &-information {
-    line-height: 22px;
-
-    a {
-      display: inline-block;
-    }
+  &-information a {
+    display: inline-block;
   }
 
   &-address {
-    margin-bottom: 6px;
-
-    div {
-      margin-bottom: 6px;
-    }
+    margin-bottom: 10px;
   }
 
   &-phone {
-    margin-bottom: 6px;
-
-    div {
-      margin-bottom: 6px;
-    }
+    margin-bottom: 10px;
   }
 
 

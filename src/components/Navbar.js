@@ -4,70 +4,50 @@ import PopoverPhone from './Popover';
 import ImagePhoneCall from '../images/phone-call.svg';
 
 class NavigationBar extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            isTop: true
-        }
-    };
-
-    // componentDidMount() {
-    //     window.addEventListener('scroll', this.handleScroll);
-    // };
-    //
-    // componentWillUnmount() {
-    //     window.removeEventListener('scroll', this.handleScroll);
-    // };
-    //
-    //
-    // handleScroll = () => {
-    //     this.setState({ isTop: window.scrollY < 100});
-    // };
-    // onScroll={this.handleScroll}
-
     render() {
         return (
-            <Navbar fluid inverse fixedTop>
+            <div className="navbar-component">
+                <Navbar fluid inverse fixedTop>
 
-                <Navbar.Header>
-                    <Navbar.Brand>
-                        <a href="/">У діда Віктора</a>
-                    </Navbar.Brand>
+                    <Navbar.Header>
+                        <Navbar.Brand>
+                            <a href="/">У діда Віктора</a>
+                        </Navbar.Brand>
 
-                    <Navbar.Toggle />
-                </Navbar.Header>
+                        <Navbar.Toggle />
+                    </Navbar.Header>
 
-                <Navbar.Collapse>
-                    <Nav pullRight>
-                        <NavItem eventKey={1} href="/about-us">About Us</NavItem>
-                        <NavItem eventKey={2} href="/offers">Offers</NavItem>
-                        <NavItem eventKey={3} href="/gallery">Gallery</NavItem>
-                        <NavItem eventKey={4} href="/contact">Contact</NavItem>
+                    <Navbar.Collapse>
+                        <Nav pullRight>
+                            <NavItem eventKey={1} href="/about-us">About Us</NavItem>
+                            <NavItem eventKey={2} href="/offers">Offers</NavItem>
+                            <NavItem eventKey={3} href="/gallery">Gallery</NavItem>
+                            <NavItem eventKey={4} href="/contact">Contact</NavItem>
 
-                        <NavItem>|</NavItem>
+                            <NavItem>|</NavItem>
 
-                        <NavDropdown eventKey={5}  title="UKR" id="dropdown">
-                            <MenuItem>ENG</MenuItem>
-                            <MenuItem>POL</MenuItem>
-                            <MenuItem>RUS</MenuItem>
-                        </NavDropdown>
+                            <NavDropdown eventKey={5}  title="UKR" id="dropdown">
+                                <MenuItem>ENG</MenuItem>
+                                <MenuItem>POL</MenuItem>
+                                <MenuItem>RUS</MenuItem>
+                            </NavDropdown>
 
-                        <OverlayTrigger
-                            rootClose
-                            trigger="click"
-                            placement="bottom"
-                            overlay={ PopoverPhone }
-                        >
-                            <NavItem eventKey={6}>
-                                <img src={ ImagePhoneCall } alt="" width="20"/>
-                            </NavItem>
-                        </OverlayTrigger>
+                            <OverlayTrigger
+                                rootClose
+                                trigger="click"
+                                placement="bottom"
+                                overlay={ PopoverPhone }
+                            >
+                                <NavItem eventKey={6}>
+                                    <img src={ ImagePhoneCall } alt="" width="20"/>
+                                </NavItem>
+                            </OverlayTrigger>
 
-                    </Nav>
-                </Navbar.Collapse>
+                        </Nav>
+                    </Navbar.Collapse>
 
-            </Navbar>
+                </Navbar>
+            </div>
         );
     }
 }
