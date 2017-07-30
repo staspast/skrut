@@ -93,7 +93,7 @@ const AboutUs = () =>
                     </div>
                 </Col>
 
-                <Col className="col-sm-push-6" xs={12} sm={6}>
+                <Col xs={12} sm={6} smPush={6}>
                     <div className="about-us__description">
                         <div>
                             Своїм гостям для проживання ми пропонуємо номер на другому поверсі дерев'яної садиби. В
@@ -110,7 +110,7 @@ const AboutUs = () =>
                     </div>
                 </Col>
 
-                <Col xs={12} sm={6} className="col-sm-pull-6">
+                <Col xs={12} sm={6} smPull={6}>
                     <div className="about-us__image">
                         <img src="http://media.istockphoto.com/photos/carpathian-mountains-yaremche-ivanofrankivska-oblast-ukraine-mountain-picture-id641062512" alt=""/>
                     </div>

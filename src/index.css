@@ -329,7 +329,11 @@ video {
 
 .reviews__page {
   border: 1px solid #e7e7e7;
-  padding: 30px 20px; }
+  padding: 30px 20px;
+  margin-bottom: 40px; }
+  @media (max-width: 767px) {
+    .reviews__page {
+      display: table; } }
   .reviews__page:before, .reviews__page:after {
     background: red url("images/quote.svg");
     content: '';
@@ -339,43 +343,65 @@ video {
     top: -15px;
     width: 30px; }
   .reviews__page:after {
-    bottom: -15px;
+    bottom: 25px;
     right: 30px;
     top: auto; }
 
 .reviews__date {
-  display: inline-block;
+  text-align: left;
+  font-size: 16px;
   font-weight: 500;
-  margin-left: 30px;
-  padding: 0 30px;
   position: relative;
   text-transform: uppercase;
-  vertical-align: middle; }
-  .reviews__date--day {
-    font-size: 28px;
-    line-height: 34px; }
-  .reviews__date--month {
-    font-size: 22px;
-    line-height: 28px; }
-  .reviews__date--year {
-    font-size: 18px;
-    line-height: 26px; }
-  .reviews__date:after {
-    background: #e7e7e7;
-    content: '';
-    display: block;
-    height: 80px;
-    left: 0;
-    margin-top: -40px;
-    position: absolute;
-    top: 50%;
-    width: 1px; }
+  margin-bottom: 20px; }
+  @media (min-width: 768px) {
+    .reviews__date {
+      text-align: center;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 0 0 30px;
+      padding: 0 30px; } }
+  @media (min-width: 768px) {
+    .reviews__date--day {
+      font-size: 28px;
+      line-height: 34px; } }
+  @media (min-width: 768px) {
+    .reviews__date--month {
+      font-size: 22px;
+      line-height: 28px; } }
+  @media (min-width: 768px) {
+    .reviews__date--year {
+      font-size: 18px;
+      line-height: 26px; } }
+  @media (min-width: 768px) {
+    .reviews__date:after {
+      background: #e7e7e7;
+      content: '';
+      display: block;
+      height: 80px;
+      left: 0;
+      margin-top: -40px;
+      position: absolute;
+      top: 50%;
+      width: 1px; } }
+  .reviews__date div {
+    display: inline-block;
+    margin-right: 5px; }
+    @media (min-width: 768px) {
+      .reviews__date div {
+        display: block; } }
 
 .reviews__data {
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle;
-  width: calc(100% - 150px); }
+  text-align: left; }
+  @media (max-width: 767px) {
+    .reviews__data {
+      display: table-footer-group;
+      margin-top: 20px; } }
+  @media (min-width: 768px) {
+    .reviews__data {
+      display: inline-block;
+      vertical-align: middle;
+      width: calc(100% - 150px); } }
   .reviews__data--name {
     font-size: 18px; }
   .reviews__data--city {
