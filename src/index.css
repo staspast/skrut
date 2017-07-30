@@ -57,7 +57,8 @@ a {
         padding: 6px 14px; }
       .navbar .navbar-nav > li > a img {
         bottom: 2px;
-        position: relative; }
+        position: relative;
+        width: 20px; }
 
 .navbar-nav > li > .dropdown-menu {
   background: #000;
@@ -160,13 +161,13 @@ header {
       transform: translateY(-50%); }
 
 .footer {
-  margin-top: 40px;
   border-top: 1px solid #e7e7e7;
+  margin-top: 40px;
   padding: 20px 15px;
   text-align: left; }
   .footer__about-us {
-    max-width: 320px;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    max-width: 320px; }
   .footer__title {
     font-size: 18px;
     margin-bottom: 20px; }
@@ -176,10 +177,11 @@ header {
     .footer__contact-us li {
       margin-bottom: 10px; }
     .footer__contact-us img {
-      margin-right: 20px; }
+      margin-right: 20px;
+      width: 20px; }
     .footer__contact-us--address {
-      vertical-align: top;
-      display: inline-block; }
+      display: inline-block;
+      vertical-align: top; }
   .footer__copyright {
     margin-top: 20px; }
 
@@ -321,3 +323,46 @@ video {
     position: absolute;
     top: 0;
     width: 100%; }
+
+.reviews .container {
+  position: relative; }
+
+.reviews__page {
+  padding: 20px 40px;
+  border: 1px solid red; }
+
+.reviews__date {
+  vertical-align: middle;
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  text-transform: uppercase; }
+  .reviews__date--day {
+    font-size: 28px;
+    line-height: 34px; }
+  .reviews__date--month {
+    font-size: 22px;
+    line-height: 28px; }
+  .reviews__date--year {
+    font-size: 18px;
+    line-height: 26px; }
+  .reviews__date:after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 60px;
+    background: red;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -30px; }
+
+.reviews__data {
+  vertical-align: middle;
+  display: inline-block;
+  width: calc(100% - 50px);
+  text-align: left; }
+  .reviews__data--name {
+    font-size: 18px; }
+  .reviews__data--city {
+    font-size: 12px; }

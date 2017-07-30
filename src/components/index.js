@@ -8,7 +8,8 @@ import Offers from './Offers';
 import Popover from './Popover';
 import Tile from './Tile';
 import Video from './Video';
+import Reviews from './Reviews';
 
 export {
-    Home,  AboutUs,  Offers,  Gallery, Footer, NavigationBar, Header, Popover, Tile, Video
+    Home,  AboutUs,  Offers,  Gallery, Footer, NavigationBar, Header, Popover, Tile, Video, Reviews
 }

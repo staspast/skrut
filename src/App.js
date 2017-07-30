@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Home,  AboutUs,  Offers,  Gallery, Footer, NavigationBar } from './components/index';
+import { Home,  AboutUs,  Offers,  Gallery, Footer, NavigationBar, Reviews } from './components/index';
 import { Contact } from './containers/index';
 
 import './App.css';
@@ -16,6 +16,7 @@ class App extends Component {
                         <Route exact path={'/'} component={ Home }/>
                         <Route path={'/about-us'} component={ AboutUs }/>
                         <Route path={'/gallery'} component={ Gallery }/>
+                        <Route path={'/reviews'} component={ Reviews }/>
                         <Route path={'/offers'} component={ Offers }/>
                         <Route path={'/contact'} component={ Contact }/>
                     </div>

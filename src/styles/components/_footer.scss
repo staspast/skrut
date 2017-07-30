@@ -1,12 +1,12 @@
 .footer {
-  margin-top: 40px;
   border-top: 1px solid #e7e7e7;
+  margin-top: 40px;
   padding: 20px 15px;
   text-align: left;
 
   &__about-us {
-    max-width: 320px;
     margin-bottom: 30px;
+    max-width: 320px;
   }
 
   &__title {
@@ -24,11 +24,12 @@
 
     img {
       margin-right: 20px;
+      width: 20px;
     }
 
     &--address {
-      vertical-align: top;
       display: inline-block;
+      vertical-align: top;
     }
   }
 

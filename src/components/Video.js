@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Url from '../images/Mountain_Waterfall.mp4';
 
 class Video extends Component {
-    render () {
+    render() {
         return (
             <video loop autoPlay>
-                <source src={ Url } type="video/mp4" />
-                <source src={ Url } type="video/ogg" />
+                <source src={ Url } type="video/mp4"/>
+                <source src={ Url } type="video/ogg"/>
             </video>
         )
     }

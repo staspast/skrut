@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import { Navbar, NavItem, NavDropdown, MenuItem, Nav, OverlayTrigger } from  'react-bootstrap';
+import React, {Component} from 'react';
+import {Navbar, NavItem, NavDropdown, MenuItem, Nav, OverlayTrigger} from  'react-bootstrap';
 import PopoverPhone from './Popover';
-// import ImagePhoneCall from '../images/phone-call.svg';
 
 class NavigationBar extends Component {
     render() {
@@ -22,11 +21,12 @@ class NavigationBar extends Component {
                             <NavItem eventKey={1} href="/about-us">About Us</NavItem>
                             <NavItem eventKey={2} href="/offers">Offers</NavItem>
                             <NavItem eventKey={3} href="/gallery">Gallery</NavItem>
-                            <NavItem eventKey={4} href="/contact">Contact</NavItem>
+                            <NavItem eventKey={4} href="/reviews">Reviews</NavItem>
+                            <NavItem eventKey={5} href="/contact">Contact</NavItem>
 
                             <NavItem>|</NavItem>
 
-                            <NavDropdown eventKey={5}  title="UKR" id="dropdown">
+                            <NavDropdown eventKey={6} title="UKR" id="dropdown">
                                 <MenuItem>ENG</MenuItem>
                                 <MenuItem>POL</MenuItem>
                                 <MenuItem>RUS</MenuItem>
@@ -38,8 +38,8 @@ class NavigationBar extends Component {
                                 placement="bottom"
                                 overlay={ PopoverPhone }
                             >
-                                <NavItem eventKey={6}>
-                                    <img src={require('../images/phone-call.svg')} alt="" width="20"/>
+                                <NavItem eventKey={7}>
+                                    <img src={require('../images/phone-call.svg')} alt=""/>
                                 </NavItem>
                             </OverlayTrigger>
 
