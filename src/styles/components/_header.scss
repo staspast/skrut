@@ -1,38 +1,38 @@
 header {
-  text-align: center;
-  height: 400px;
-  overflow: hidden;
   background: url("images/mountains_river.png") 50% 50%;
   background-size: cover;
+  height: 400px;
+  margin-bottom: 40px;
+  overflow: hidden;
   position: relative;
-  margin-bottom: 15px;
-  
+  text-align: center;
+
   &:after {
+    background: rgba(0, 0, 0, .6);
     content: '';
     display: block;
+    height: 100%;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background:rgba(0,0,0,.6);
   }
 }
 
 .background {
-  height: 100vh;
   background: rgba(0, 0, 0, 0.6);
-  position: relative;
+  height: 100vh;
   overflow: hidden;
+  position: relative;
 }
 
 .header-title {
-  z-index:1;
+  color: #fff;
+  margin-top: -60px;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  color: #fff;
-  margin-top: -60px;
+  z-index: 1;
 
   h1 {
     font-size: 36px;

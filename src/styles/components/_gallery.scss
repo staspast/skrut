@@ -1,6 +1,11 @@
 .gallery {
+
+  h3 {
+    text-align: left;
+  }
+
   .pswp-thumbnail {
-    width: 25%;
     border: 2px solid #fff;
+    width: 25%;
   }
 }

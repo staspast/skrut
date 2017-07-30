@@ -1,9 +1,17 @@
 .navbar {
-  padding: 5px;
   background: #000;
+  padding: 5px;
 
   &-component {
     margin-top: 61px;
+  }
+
+  .navbar-toggle {
+    border-color: transparent;
+
+    &:hover, &:focus {
+      background: transparent;
+    }
   }
 
   .navbar-brand {
@@ -13,47 +21,55 @@
   .navbar-nav > li {
     padding: 7px 0;
 
-    &:nth-of-type(5) > a:hover {
-      cursor: default;
-      border-color: transparent;
+    &:nth-of-type(5) {
+      display: none;
+
+      @media (min-width: 768px) {
+        display: block;
+      }
+
+      & > a:hover {
+        border-color: transparent;
+        cursor: default;
+      }
     }
 
     & > a {
-      padding: 7px 15px;
       box-sizing: border-box;
+      color: #fff;
       font-size: 16px;
       font-weight: 300;
-      color: #fff;
+      padding: 7px 15px;
 
       &:hover, &:active {
+        border: 1px solid rgba(255, 255, 255, .5);
+        border-radius: 3px;
         color: #fff;
         padding: 6px 14px;
-        border: 1px solid rgba(255,255,255, .5);
-        border-radius: 3px;
       }
 
       img {
-        position: relative;
         bottom: 2px;
+        position: relative;
       }
     }
   }
 }
 
-.navbar-nav>li>.dropdown-menu {
+.navbar-nav > li > .dropdown-menu {
+  background: #000;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 3px;
   min-width: 75px;
-  background: #000;
 
   & > li > a {
     color: #7a7a7a;
-    font-weight: 300;
     font-size: 16px;
+    font-weight: 300;
 
     &:hover {
-      color: #fff;
       background: transparent;
+      color: #fff;
     }
   }
 }

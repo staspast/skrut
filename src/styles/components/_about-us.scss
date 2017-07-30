@@ -1,0 +1,47 @@
+.about-us {
+  text-align: left;
+
+  &__title {
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    div {
+      margin-bottom: 10px;
+    }
+
+    &--columns {
+      @media (min-width: 768px) {
+        column-gap: 40px;
+        column-count: 2;
+      }
+    }
+  }
+
+  &__image {
+    margin: 10px 0 20px;
+    max-height: 300px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .test {
+    background: #6fbc6d;
+    height: 100px;
+    margin-bottom: 10px;
+    text-align: center;
+
+    a {
+      color: #fff;
+      display: block;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
