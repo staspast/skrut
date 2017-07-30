@@ -25,6 +25,7 @@ class LightboxGallery extends Component {
     render() {
         return (
             <PhotoSwipeGallery
+                className="clearfix"
                 items={ this.props.images }
                 thumbnailContent={ this.getThumbnailContent }/>
         );

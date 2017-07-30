@@ -159,10 +159,29 @@ header {
       top: 50%;
       transform: translateY(-50%); }
 
-footer {
-  background: rgba(0, 0, 0, 0.8);
+.footer {
+  margin-top: 40px;
   border-top: 1px solid #e7e7e7;
-  height: 60px; }
+  padding: 20px 15px;
+  text-align: left; }
+  .footer__about-us {
+    max-width: 320px;
+    margin-bottom: 30px; }
+  .footer__title {
+    font-size: 18px;
+    margin-bottom: 20px; }
+  .footer__contact-us {
+    list-style: none;
+    padding: 0; }
+    .footer__contact-us li {
+      margin-bottom: 10px; }
+    .footer__contact-us img {
+      margin-right: 20px; }
+    .footer__contact-us--address {
+      vertical-align: top;
+      display: inline-block; }
+  .footer__copyright {
+    margin-top: 20px; }
 
 .popover-phone {
   background: #000;
@@ -170,6 +189,7 @@ footer {
   font-size: 16px;
   line-height: 24px; }
   .popover-phone a {
+    font-weight: 300;
     color: #fff; }
 
 .offers {
@@ -200,19 +220,25 @@ footer {
 .contact {
   line-height: 22px;
   text-align: left; }
-  .contact .container {
-    margin-bottom: 15px; }
-  .contact .title {
-    font-size: 20px;
-    font-weight: 500;
+  .contact__title {
+    font-size: 26px;
+    line-height: 34px;
     margin-bottom: 10px;
     text-align: left; }
-  .contact-information a {
+  .contact__information a {
     display: inline-block; }
-  .contact-address {
+  .contact__address {
     margin-bottom: 10px; }
-  .contact-phone {
+  .contact__phone {
     margin-bottom: 10px; }
+  .contact__form button {
+    border: 1px solid #e7e7e7;
+    border-radius: 0;
+    font-size: 12px; }
+  .contact .container {
+    margin-bottom: 40px; }
+  .contact h4 {
+    margin: 20px 0; }
   .contact .form-control {
     border: 1px solid #e7e7e7;
     border-radius: 2px;
@@ -222,15 +248,14 @@ footer {
     height: 160px;
     resize: none; }
 
-.form button {
-  border: 1px solid #e7e7e7;
-  border-radius: 0;
-  font-size: 12px; }
-  .form button:disabled {
-    background-color: #e7e7e7; }
+.gallery__title {
+  text-align: left;
+  font-size: 26px;
+  line-height: 34px;
+  margin-bottom: 10px; }
 
-.gallery h3 {
-  text-align: left; }
+.gallery .pswp-gallery {
+  margin-bottom: 20px; }
 
 .gallery .pswp-thumbnail {
   border: 2px solid #fff;
@@ -254,12 +279,13 @@ footer {
     overflow: hidden; }
     .about-us__image img {
       width: 100%; }
-  .about-us .test {
+  .about-us__forwarding {
     background: #6fbc6d;
     height: 100px;
     margin-bottom: 10px;
     text-align: center; }
-    .about-us .test a {
+    .about-us__forwarding a {
+      font-size: 18px;
       color: #fff;
       display: block;
       position: relative;

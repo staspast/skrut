@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Navbar, NavItem, NavDropdown, MenuItem, Nav, OverlayTrigger } from  'react-bootstrap';
 import PopoverPhone from './Popover';
-import ImagePhoneCall from '../images/phone-call.svg';
+// import ImagePhoneCall from '../images/phone-call.svg';
 
 class NavigationBar extends Component {
     render() {
         return (
             <div className="navbar-component">
-                <Navbar fluid inverse fixedTop>
+                <Navbar inverse fixedTop>
 
                     <Navbar.Header>
                         <Navbar.Brand>
@@ -39,7 +39,7 @@ class NavigationBar extends Component {
                                 overlay={ PopoverPhone }
                             >
                                 <NavItem eventKey={6}>
-                                    <img src={ ImagePhoneCall } alt="" width="20"/>
+                                    <img src={require('../images/phone-call.svg')} alt="" width="20"/>
                                 </NavItem>
                             </OverlayTrigger>
 

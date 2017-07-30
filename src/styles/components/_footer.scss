@@ -1,5 +1,38 @@
-footer {
-  background: rgba(0, 0, 0, 0.8);
+.footer {
+  margin-top: 40px;
   border-top: 1px solid #e7e7e7;
-  height: 60px;
+  padding: 20px 15px;
+  text-align: left;
+
+  &__about-us {
+    max-width: 320px;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  &__contact-us {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    img {
+      margin-right: 20px;
+    }
+
+    &--address {
+      vertical-align: top;
+      display: inline-block;
+    }
+  }
+
+  &__copyright {
+    margin-top: 20px;
+  }
 }

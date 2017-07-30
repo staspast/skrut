@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { Grid, FormGroup, FormControl, Row, Col, Button } from  'react-bootstrap'
+import React, {Component} from 'react'
+import {Grid, FormGroup, FormControl, Row, Col, Button} from  'react-bootstrap'
 import Header from  '../components/Header';
 import SimpleMapExample from '../containers/Map';
 
@@ -34,23 +34,23 @@ class Contact extends Component {
     };
 
     handleNameChange = (event) => {
-        this.setState({ name: event.target.value })
+        this.setState({name: event.target.value})
     };
 
     handleSurnameChange = (event) => {
-        this.setState({ surname: event.target.value })
+        this.setState({surname: event.target.value})
     };
 
     handlePhoneChange = (event) => {
-        this.setState({ phone: event.target.value })
+        this.setState({phone: event.target.value})
     };
 
     handleEmailChange = (event) => {
-        this.setState({ email: event.target.value })
+        this.setState({email: event.target.value})
     };
 
     handleMessageChange = (event) => {
-        this.setState({ message: event.target.value })
+        this.setState({message: event.target.value})
     };
 
     sendEmail = (e) => {
@@ -59,7 +59,7 @@ class Contact extends Component {
             this.state.surname + '&surname=' +
             this.state.phone + '&phone=' +
             this.state.email + '&message=' +
-            this.state.message, { method: 'GET' })
+            this.state.message, {method: 'GET'})
             .then((res) => {
                 console.log(res)
             });
@@ -75,9 +75,9 @@ class Contact extends Component {
                 <Grid>
                     <Row>
                         <Col md={6}>
-                            <div className="title">Contact</div>
+                            <div className="contact__title">Contact</div>
 
-                            <div className="contact-information">
+                            <div className="contact__information">
                                 <span>Jeśli masz pytania odnośnie współpracy lub chcesz przesłać zapytanie ofertowe, napisz do nas na </span>
                                 <a href="mailto:skrut@online.ua">skrut@online.ua</a>
                                 <span> lub wypełnij  formularz kontaktowy. Skontaktujemy się z Tobą tak szybko, jak to możliwe.</span>
@@ -85,7 +85,7 @@ class Contact extends Component {
 
                             <h4>Садиба "У діда Віктора"</h4>
 
-                            <Row className="contact-address">
+                            <Row className="contact__address">
                                 <Col xs={4}>
                                     Address:
                                 </Col>
@@ -96,7 +96,7 @@ class Contact extends Component {
                                 </Col>
                             </Row>
 
-                            <Row className="contact-phone">
+                            <Row className="contact__phone">
                                 <Col xs={4}>
                                     Phone:
                                 </Col>
@@ -107,7 +107,7 @@ class Contact extends Component {
                                 </Col>
                             </Row>
 
-                            <Row className="contact-phone">
+                            <Row className="contact__phone">
                                 <Col xs={4}>
                                     E-mail:
                                 </Col>
@@ -117,11 +117,13 @@ class Contact extends Component {
                             </Row>
                         </Col>
 
-                        <Col md={6} className="form">
-                            <div className="title">Contact form</div>
+                        <Col md={6} className="contact__form">
+                            <div className="contact__title">Contact form</div>
 
-                            <form onSubmit={ this.sendEmail }>
-
+                            <form
+                                onSubmit={ this.sendEmail }
+                                autoComplete="off"
+                            >
                                 <Row>
                                     <Col xs={6}>
                                         <FormGroup controlId="nameText">

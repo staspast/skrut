@@ -30,13 +30,14 @@
     }
   }
 
-  .test {
+  &__forwarding {
     background: #6fbc6d;
     height: 100px;
     margin-bottom: 10px;
     text-align: center;
 
     a {
+      font-size: 18px;
       color: #fff;
       display: block;
       position: relative;

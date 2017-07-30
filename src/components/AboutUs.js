@@ -119,17 +119,17 @@ const AboutUs = () =>
 
             <Row>
                 <Col xs={12} sm={4}>
-                    <div className="test">
+                    <div className="about-us__forwarding">
                         <a href="/gallery">Zobacz zdjęcia</a>
                     </div>
                 </Col>
                 <Col xs={12} sm={4}>
-                    <div className="test">
+                    <div className="about-us__forwarding">
                         <a href="/offers">Zobacz nasze oferty</a>
                     </div>
                 </Col>
                 <Col xs={12} sm={4}>
-                    <div className="test">
+                    <div className="about-us__forwarding">
                         <a href="/contact">Napisz do nas</a>
                     </div>
                 </Col>

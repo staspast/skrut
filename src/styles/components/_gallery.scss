@@ -1,11 +1,19 @@
 .gallery {
-
-  h3 {
+  &__title {
     text-align: left;
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 10px;
   }
 
-  .pswp-thumbnail {
-    border: 2px solid #fff;
-    width: 25%;
+  .pswp {
+    &-gallery {
+      margin-bottom: 20px;
+    }
+
+    &-thumbnail {
+      border: 2px solid #fff;
+      width: 25%;
+    }
   }
 }
