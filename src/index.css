@@ -36,12 +36,12 @@ a {
     color: #fff; }
   .navbar .navbar-nav > li {
     padding: 7px 0; }
-    .navbar .navbar-nav > li:nth-of-type(5) {
+    .navbar .navbar-nav > li:nth-of-type(6) {
       display: none; }
       @media (min-width: 768px) {
-        .navbar .navbar-nav > li:nth-of-type(5) {
+        .navbar .navbar-nav > li:nth-of-type(6) {
           display: block; } }
-      .navbar .navbar-nav > li:nth-of-type(5) > a:hover {
+      .navbar .navbar-nav > li:nth-of-type(6) > a:hover {
         border-color: transparent;
         cursor: default; }
     .navbar .navbar-nav > li > a {
@@ -328,15 +328,29 @@ video {
   position: relative; }
 
 .reviews__page {
-  padding: 20px 40px;
-  border: 1px solid red; }
+  border: 1px solid #e7e7e7;
+  padding: 30px 20px; }
+  .reviews__page:before, .reviews__page:after {
+    background: red url("images/quote.svg");
+    content: '';
+    display: block;
+    height: 30px;
+    position: absolute;
+    top: -15px;
+    width: 30px; }
+  .reviews__page:after {
+    bottom: -15px;
+    right: 30px;
+    top: auto; }
 
 .reviews__date {
-  vertical-align: middle;
-  position: relative;
   display: inline-block;
   font-weight: 500;
-  text-transform: uppercase; }
+  margin-left: 30px;
+  padding: 0 30px;
+  position: relative;
+  text-transform: uppercase;
+  vertical-align: middle; }
   .reviews__date--day {
     font-size: 28px;
     line-height: 34px; }
@@ -347,22 +361,23 @@ video {
     font-size: 18px;
     line-height: 26px; }
   .reviews__date:after {
+    background: #e7e7e7;
     content: '';
     display: block;
-    width: 1px;
-    height: 60px;
-    background: red;
+    height: 80px;
+    left: 0;
+    margin-top: -40px;
     position: absolute;
     top: 50%;
-    left: 0;
-    margin-top: -30px; }
+    width: 1px; }
 
 .reviews__data {
-  vertical-align: middle;
   display: inline-block;
-  width: calc(100% - 50px);
-  text-align: left; }
+  text-align: left;
+  vertical-align: middle;
+  width: calc(100% - 150px); }
   .reviews__data--name {
     font-size: 18px; }
   .reviews__data--city {
-    font-size: 12px; }
+    font-size: 12px;
+    margin-bottom: 10px; }

@@ -5,18 +5,34 @@
   }
 
   &__page {
-    padding: 20px 40px;
-    border: 1px solid red ;
+    border: 1px solid #e7e7e7;
+    padding: 30px 20px;
+
+    &:before, &:after {
+      background: red url("images/quote.svg");
+      content: '';
+      display: block;
+      height: 30px;
+      position: absolute;
+      top: -15px;
+      width: 30px;
+    }
+
+    &:after {
+      bottom: -15px;
+      right: 30px;
+      top: auto;
+    }
   }
 
   &__date {
-    vertical-align: middle;
-    position: relative;
     display: inline-block;
-
-    //width: 120px;
     font-weight: 500;
+    margin-left: 30px;
+    padding: 0 30px;
+    position: relative;
     text-transform: uppercase;
+    vertical-align: middle;
 
     &--day {
       font-size: 28px;
@@ -34,30 +50,30 @@
     }
 
     &:after {
+      background: #e7e7e7;
       content: '';
       display: block;
-      width: 1px;
-      height: 60px;
-      background: red;
+      height: 80px;
+      left: 0;
+      margin-top: -40px;
       position: absolute;
       top: 50%;
-      left: 0;
-      margin-top: -30px;
+      width: 1px;
     }
   }
 
   &__data {
-    vertical-align: middle;
     display: inline-block;
-    width: calc(100% - 50px);
     text-align: left;
-    //padding: 0 40px;
+    vertical-align: middle;
+    width: calc(100% - 150px);
 
     &--name {
       font-size: 18px;
     }
     &--city {
       font-size: 12px;
+      margin-bottom: 10px;
     }
   }
 }
