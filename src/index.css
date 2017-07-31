@@ -440,3 +440,9 @@ video {
 .form textarea.form-control {
   height: 160px;
   resize: none; }
+
+.form__custom {
+  margin-top: 30px; }
+  @media (min-width: 992px) {
+    .form__custom {
+      margin: 0; } }

@@ -117,7 +117,7 @@ class Contact extends Component {
                             </Row>
                         </Col>
 
-                        <Col md={6} className="form">
+                        <Col md={6} className="form form__custom">
                             <div className="contact__title">Contact form</div>
 
                             <Form
