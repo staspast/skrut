@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Navbar, NavItem, NavDropdown, MenuItem, Nav, OverlayTrigger} from  'react-bootstrap';
 import PopoverPhone from './Popover';
+import {FormattedMessage} from 'react-intl'
 
 class NavigationBar extends Component {
     render() {
@@ -10,7 +11,7 @@ class NavigationBar extends Component {
 
                     <Navbar.Header>
                         <Navbar.Brand>
-                            <a href="/">У діда Віктора</a>
+                            <a href="/"><FormattedMessage id="title"/></a>
                         </Navbar.Brand>
 
                         <Navbar.Toggle />
@@ -18,11 +19,11 @@ class NavigationBar extends Component {
 
                     <Navbar.Collapse>
                         <Nav pullRight>
-                            <NavItem eventKey={1} href="/about-us">About Us</NavItem>
-                            <NavItem eventKey={2} href="/offers">Offers</NavItem>
-                            <NavItem eventKey={3} href="/gallery">Gallery</NavItem>
-                            <NavItem eventKey={4} href="/reviews">Reviews</NavItem>
-                            <NavItem eventKey={5} href="/contact">Contact</NavItem>
+                            <NavItem eventKey={1} href="/about-us"><FormattedMessage id="navbar.aboutUs"/></NavItem>
+                            <NavItem eventKey={2} href="/offers"><FormattedMessage id="navbar.offers"/></NavItem>
+                            <NavItem eventKey={3} href="/gallery"><FormattedMessage id="navbar.gallery"/></NavItem>
+                            <NavItem eventKey={4} href="/reviews"><FormattedMessage id="navbar.reviews"/></NavItem>
+                            <NavItem eventKey={5} href="/contact"><FormattedMessage id="navbar.contact"/></NavItem>
 
                             <NavItem>|</NavItem>
 

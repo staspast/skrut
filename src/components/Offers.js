@@ -3,6 +3,7 @@ import {Grid, Row, Col, Tab, Tabs} from  'react-bootstrap';
 import Header from  './Header';
 import LightboxGallery from '../containers/LightboxGallery';
 import {GalleryItems} from "../constants/Images.js";
+import {FormattedMessage} from 'react-intl'
 
 const Offers = () =>
     <div className="offers">
@@ -13,23 +14,23 @@ const Offers = () =>
                 <Tab eventKey={1} title="Перший номер">
                     <Row>
                         <Col md={5}>
-                            <div className="offers-title">Перший номер</div>
+                            <div className="offers-title"><FormattedMessage id="offer.first.name"/></div>
 
                             <div className="offers-information">
-                                <div>Інформація про номер:</div>
+                                <div><FormattedMessage id="offer.info"/></div>
                                 <ul>
-                                    <li>Вітальня, 16 кв. м.</li>
-                                    <li>Спальня 15 кв.</li>
-                                    <li>Санвузол 9 м.кв.</li>
+                                    <li><FormattedMessage id="offer.first.livingRoom"/></li>
+                                    <li><FormattedMessage id="offer.first.bedroom"/></li>
+                                    <li><FormattedMessage id="offer.first.restroom"/></li>
                                 </ul>
-                                <div>Вміст:</div>
+                                <div><FormattedMessage id="offer.first.inside"/></div>
                                 <ul>
-                                    <li>Розкладна канапа "американка" 1,60х2,00</li>
-                                    <li>Холодильник</li>
-                                    <li>Телевізор (SAt TV Hotbirt, Sirius, Amos)</li>
-                                    <li>шафа для речей</li>
-                                    <li>Велике дерев`яне ліжко 2.00x1.80</li>
-                                    <li>фен</li>
+                                    <li><FormattedMessage id="offer.first.sofa"/></li>
+                                    <li><FormattedMessage id="offer.first.fridge"/></li>
+                                    <li><FormattedMessage id="offer.first.tv"/></li>
+                                    <li><FormattedMessage id="offer.first.wardrobe"/></li>
+                                    <li><FormattedMessage id="offer.first.bed"/></li>
+                                    <li><FormattedMessage id="offer.first.hairdryer"/></li>
                                 </ul>
                             </div>
                         </Col>
@@ -42,23 +43,23 @@ const Offers = () =>
                 <Tab eventKey={2} title="Другий номер">
                     <Row>
                         <Col md={5}>
-                            <div>Другий номер</div>
+                            <div><FormattedMessage id="offer.second.name"/></div>
 
                             <div className="offers-information">
-                                <div>Інформація про номер:</div>
+                                <div><FormattedMessage id="offer.info"/></div>
                                 <ul>
-                                    <li>Вітальня, 16 кв. м.</li>
-                                    <li>Спальня 15 кв.</li>
-                                    <li>Санвузол 9 м.кв.</li>
+                                    <li><FormattedMessage id="offer.second.livingRoom"/></li>
+                                    <li><FormattedMessage id="offer.second.bedroom"/></li>
+                                    <li><FormattedMessage id="offer.second.restroom"/></li>
                                 </ul>
-                                <div>Вміст:</div>
+                                <div><FormattedMessage id="offer.second.inside"/></div>
                                 <ul>
-                                    <li>Розкладна канапа "американка" 1,60х2,00</li>
-                                    <li>Холодильник</li>
-                                    <li>Телевізор (SAt TV Hotbirt, Sirius, Amos)</li>
-                                    <li>шафа для речей</li>
-                                    <li>Велике дерев`яне ліжко 2.00x1.80</li>
-                                    <li>фен</li>
+                                    <li><FormattedMessage id="offer.second.sofa"/></li>
+                                    <li><FormattedMessage id="offer.second.fridge"/></li>
+                                    <li><FormattedMessage id="offer.second.tv"/></li>
+                                    <li><FormattedMessage id="offer.second.wardrobe"/></li>
+                                    <li><FormattedMessage id="offer.second.bed"/></li>
+                                    <li><FormattedMessage id="offer.second.hairdryer"/></li>
                                 </ul>
                             </div>
                         </Col>

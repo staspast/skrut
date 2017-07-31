@@ -1,25 +1,29 @@
 import React from 'react';
 import { Grid, Row, Col } from  'react-bootstrap';
+import {FormattedMessage} from 'react-intl'
 
 const Footer = () =>
     <footer className="footer">
         <Grid>
             <Row>
                 <Col xs={12} sm={4}>
-                    <a href="/" className="footer__title">У Діда Віктора</a>
+                    <a href="/" className="footer__title">
+                        <FormattedMessage id="title"/>
+                    </a>
                     <div className="footer__about-us">
-                        Lorem Ipsum is simply text of the printing and typesetting industry is simply text of
-                        the printing and typesetting industry.
+                        <FormattedMessage id="footer.desc"/>
                     </div>
                 </Col>
 
                 <Col xs={12} sm={6} smOffset={2} md={5} mdOffset={3} lg={4} lgOffset={4}>
-                    <div className="footer__title">Contact Us</div>
+                    <div className="footer__title">
+                        <FormattedMessage id="contact.form"/>
+                    </div>
                     <ul className="footer__contact-us">
                         <li>
                             <img src={require('../images/placeholder.svg')} alt=""/>
                             <div className="footer__contact-us--address">
-                                <div>вул. Хоткевича 5/2, м. Яремче, <br/> Ів-Франківська обл.</div>
+                                <div><FormattedMessage id="contact.street"/> <FormattedMessage id="contact.town"/> <br/> <FormattedMessage id="contact.region"/></div>
                             </div>
                         </li>
                         <li>

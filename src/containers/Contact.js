@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {Grid, FormGroup, FormControl, Row, Col, Button} from  'react-bootstrap'
 import Header from  '../components/Header';
 import SimpleMapExample from '../containers/Map';
+import {FormattedMessage} from 'react-intl'
 
 class Contact extends Component {
     constructor() {
@@ -75,30 +76,30 @@ class Contact extends Component {
                 <Grid>
                     <Row>
                         <Col md={6}>
-                            <div className="contact__title">Contact</div>
+                            <div className="contact__title"><FormattedMessage id="navbar.contact"/></div>
 
                             <div className="contact__information">
-                                <span>Jeśli masz pytania odnośnie współpracy lub chcesz przesłać zapytanie ofertowe, napisz do nas na </span>
+                                <span><FormattedMessage id="contact.writeToUs"/> </span>
                                 <a href="mailto:skrut@online.ua">skrut@online.ua</a>
-                                <span> lub wypełnij  formularz kontaktowy. Skontaktujemy się z Tobą tak szybko, jak to możliwe.</span>
+                                <span><FormattedMessage id="contact.fillForm"/></span>
                             </div>
 
-                            <h4>Садиба "У діда Віктора"</h4>
+                            <h4><FormattedMessage id="contact.name"/> </h4>
 
                             <Row className="contact__address">
                                 <Col xs={4}>
-                                    Address:
+                                    <FormattedMessage id="contact.address"/>
                                 </Col>
                                 <Col xs={8}>
-                                    <div>вул. Хоткевича 5/2,</div>
-                                    <div>м. Яремче,</div>
-                                    <div>Ів-Франківська обл.</div>
+                                    <div><FormattedMessage id="contact.street"/> </div>
+                                    <div><FormattedMessage id="contact.town"/> </div>
+                                    <div><FormattedMessage id="contact.region"/> </div>
                                 </Col>
                             </Row>
 
                             <Row className="contact__phone">
                                 <Col xs={4}>
-                                    Phone:
+                                    <FormattedMessage id="contact.phone"/>
                                 </Col>
                                 <Col xs={8}>
                                     <div>+38 096 355 28 25</div>
@@ -109,7 +110,7 @@ class Contact extends Component {
 
                             <Row className="contact__phone">
                                 <Col xs={4}>
-                                    E-mail:
+                                    <FormattedMessage id="contact.email"/>
                                 </Col>
                                 <Col xs={8}>
                                     <a href="mailto:skrut@online.ua">skrut@online.ua</a>
@@ -118,7 +119,7 @@ class Contact extends Component {
                         </Col>
 
                         <Col md={6} className="contact__form">
-                            <div className="contact__title">Contact form</div>
+                            <div className="contact__title"><FormattedMessage id="contact.form"/> </div>
 
                             <form
                                 onSubmit={ this.sendEmail }

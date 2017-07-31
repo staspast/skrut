@@ -1,13 +1,14 @@
 import React from 'react';
+import {FormattedMessage} from 'react-intl'
 
 const Header = () =>
     <header>
         <div className="header-title">
             <h1>
-                Lorem Ipsum is simply
+              <FormattedMessage id="header.part1"/>
             </h1>
             <h2>
-                text of the printing and typesetting industry.
+              <FormattedMessage id="header.part2"/>
             </h2>
         </div>
     </header>;
