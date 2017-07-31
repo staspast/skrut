@@ -16,7 +16,7 @@ class LightboxGallery extends Component {
             <div>
                 <img src={ item.thumbnail }/>
                 <div className="plug">
-                    test
+                    <img src={require('../images/search.svg')} alt=""/>
                 </div>
             </div>
         );

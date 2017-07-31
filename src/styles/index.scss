@@ -28,6 +28,14 @@ a {
   }
 }
 
+*:focus {
+  outline: none;
+}
+
+
+//
+@import "components/buttons";
+
 @import "components/navbar";
 @import "components/header";
 @import "components/tile";

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Grid, FormGroup, FormControl, Row, Col, Button} from  'react-bootstrap'
+import {Grid, FormGroup, FormControl, Row, Col } from  'react-bootstrap'
 import Header from  '../components/Header';
 import SimpleMapExample from '../containers/Map';
 
@@ -190,13 +190,13 @@ class Contact extends Component {
                                 </Row>
                             </form>
 
-                            <Button
+                            <button
                                 className="pull-right"
                                 disabled={ !this.inputsValid() }
                                 type="submit"
                             >
-                                Submit
-                            </Button>
+                                Send mail
+                            </button>
                         </Col>
                     </Row>
                 </Grid>

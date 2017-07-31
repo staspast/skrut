@@ -12,19 +12,19 @@ class Gallery extends Component {
 
                 <Grid>
                     <Row>
-                        <Col>
+                        <Col xs={12}>
                             <div className="gallery__title">Lorem Ipsum is simply</div>
                             <LightboxGallery images={ GalleryItems }/>
                         </Col>
                     </Row>
                     <Row>
-                        <Col>
+                        <Col xs={12}>
                             <div className="gallery__title">Літо - грибна пора</div>
                             <LightboxGallery images={ GalleryItems }/>
                         </Col>
                     </Row>
                     <Row>
-                        <Col>
+                        <Col xs={12}>
                             <div className="gallery__title">Відпочинок в Яремчі - вибирайте на свій смак!</div>
                             <LightboxGallery images={ GalleryItems }/>
                         </Col>

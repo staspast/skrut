@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Modal, Button} from  'react-bootstrap';
+import {Modal} from  'react-bootstrap';
 
 class ModalStructure extends Component {
     constructor(){
@@ -37,7 +37,7 @@ class ModalStructure extends Component {
                     </Modal.Body>
 
                     <Modal.Footer>
-                        <Button onClick={ this.close }>Close</Button>
+                        <button onClick={ this.close }>Close</button>
                     </Modal.Footer>
 
                 </Modal>
