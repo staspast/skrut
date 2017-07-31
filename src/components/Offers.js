@@ -3,19 +3,20 @@ import {Grid, Row, Col, Tab, Tabs} from  'react-bootstrap';
 import Header from  './Header';
 import LightboxGallery from '../containers/LightboxGallery';
 import {GalleryItems} from "../constants/Images.js";
+import PriceInformation from "./Price.js";
 
 const Offers = () =>
     <div className="offers">
         <Header/>
 
         <Grid>
-            <Tabs defaultActiveKey={1} id="offers-tabs">
+            <Tabs defaultActiveKey={1} id="offers__tabs">
                 <Tab eventKey={1} title="Перший номер">
                     <Row>
                         <Col md={5}>
-                            <div className="offers-title">Перший номер</div>
+                            <div className="offers__title">Перший номер</div>
 
-                            <div className="offers-information">
+                            <div className="offers__information">
                                 <div>Інформація про номер:</div>
                                 <ul>
                                     <li>Вітальня, 16 кв. м.</li>
@@ -30,6 +31,22 @@ const Offers = () =>
                                     <li>шафа для речей</li>
                                     <li>Велике дерев`яне ліжко 2.00x1.80</li>
                                     <li>фен</li>
+                                </ul>
+
+                                <div>За потребою :</div>
+                                <ul>
+                                    <li>Господарі нададуть Вам у користування вітальню</li>
+                                    <li>
+                                        <div>
+                                            <span>Можна rористуватися кухнею господарів</span>
+                                            <ul>
+                                                <li>газова плитка</li>
+                                                <li>мікрохвильова піч</li>
+                                                <li>морозильна камера</li>
+                                                <li>посуд</li>
+                                            </ul>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
                         </Col>
@@ -42,9 +59,9 @@ const Offers = () =>
                 <Tab eventKey={2} title="Другий номер">
                     <Row>
                         <Col md={5}>
-                            <div>Другий номер</div>
+                            <div className="offers__title">Другий номер</div>
 
-                            <div className="offers-information">
+                            <div className="offers__information">
                                 <div>Інформація про номер:</div>
                                 <ul>
                                     <li>Вітальня, 16 кв. м.</li>
@@ -60,6 +77,22 @@ const Offers = () =>
                                     <li>Велике дерев`яне ліжко 2.00x1.80</li>
                                     <li>фен</li>
                                 </ul>
+
+                                <div>За потребою :</div>
+                                <ul>
+                                    <li>Господарі нададуть Вам у користування вітальню</li>
+                                    <li>
+                                        <div>
+                                            <span>Можна rористуватися кухнею господарів</span>
+                                            <ul>
+                                                <li>газова плитка</li>
+                                                <li>мікрохвильова піч</li>
+                                                <li>морозильна камера</li>
+                                                <li>посуд</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </Col>
 
@@ -69,6 +102,12 @@ const Offers = () =>
                     </Row>
                 </Tab>
             </Tabs>
+
+            <Row>
+                <Col xs={12}>
+                    <PriceInformation/>
+                </Col>
+            </Row>
         </Grid>
     </div>;
 

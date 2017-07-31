@@ -1,12 +1,13 @@
 .offers {
   text-align: left;
 
-  &-title {
+  &__title {
     font-size: 20px;
     line-height: 26px;
+    margin-bottom: 10px;
   }
 
-  &-information {
+  &__information {
     margin: 0 0 15px 15px;
   }
 

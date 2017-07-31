@@ -213,10 +213,11 @@ header {
 
 .offers {
   text-align: left; }
-  .offers-title {
+  .offers__title {
     font-size: 20px;
-    line-height: 26px; }
-  .offers-information {
+    line-height: 26px;
+    margin-bottom: 10px; }
+  .offers__information {
     margin: 0 0 15px 15px; }
   .offers .pswp-thumbnail {
     width: 50%;
@@ -312,6 +313,9 @@ video {
   transform: translateX(-50%) translateY(-50%);
   width: auto;
   z-index: -100; }
+
+.pswp-gallery {
+  text-align: center; }
 
 .pswp-thumbnail {
   cursor: pointer;
