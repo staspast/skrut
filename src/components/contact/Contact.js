@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { FormGroup, ControlLabel, FormControl, Row, Button } from  'react-bootstrap'
-/* global gapi */
+
 class Contact extends Component {
 
   constructor () {
@@ -49,7 +49,6 @@ class Contact extends Component {
       .then((res) => {
         console.log(res)
       });
-
     e.preventDefault()
   }
 
@@ -96,7 +95,7 @@ class Contact extends Component {
             />
           </FormGroup>
 
-          <Button disabled={!this.inputsValid()} type="submit">Submit</Button>
+          <Button type="submit">Submit</Button>
         </form>
       </Row>
     )
