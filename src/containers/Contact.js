@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Grid, FormGroup, FormControl, Row, Col } from  'react-bootstrap'
+import {Grid, Form, FormGroup, FormControl, Row, Col } from  'react-bootstrap'
 import Header from  '../components/Header';
 import SimpleMapExample from '../containers/Map';
 
@@ -117,10 +117,10 @@ class Contact extends Component {
                             </Row>
                         </Col>
 
-                        <Col md={6} className="contact__form">
+                        <Col md={6} className="form">
                             <div className="contact__title">Contact form</div>
 
-                            <form
+                            <Form
                                 onSubmit={ this.sendEmail }
                                 autoComplete="off"
                             >
@@ -188,7 +188,7 @@ class Contact extends Component {
                                         </FormGroup>
                                     </Col>
                                 </Row>
-                            </form>
+                            </Form>
 
                             <button
                                 className="pull-right"

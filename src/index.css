@@ -250,20 +250,10 @@ header {
     margin-bottom: 10px; }
   .contact__phone {
     margin-bottom: 10px; }
-  .contact__form button {
-    font-size: 12px; }
   .contact .container {
     margin-bottom: 40px; }
   .contact h4 {
     margin: 20px 0; }
-  .contact .form-control {
-    border: 1px solid #e7e7e7;
-    border-radius: 3px;
-    box-shadow: none;
-    font-size: 12px; }
-  .contact textarea.form-control {
-    height: 160px;
-    resize: none; }
 
 .gallery__title {
   font-size: 26px;
@@ -437,3 +427,16 @@ video {
   .reviews__data--city {
     font-size: 12px;
     margin-bottom: 10px; }
+
+.form button {
+  font-size: 12px; }
+
+.form .form-control {
+  border: 1px solid #e7e7e7;
+  border-radius: 3px;
+  box-shadow: none;
+  font-size: 12px; }
+
+.form textarea.form-control {
+  height: 160px;
+  resize: none; }

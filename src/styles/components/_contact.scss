@@ -23,29 +23,11 @@
     margin-bottom: 10px;
   }
 
-  &__form {
-    button {
-      font-size: 12px;
-    }
-  }
-
   .container {
     margin-bottom: 40px;
   }
 
   h4 {
     margin: 20px 0;
-  }
-
-  .form-control {
-    border: 1px solid #e7e7e7;
-    border-radius: 3px;
-    box-shadow: none;
-    font-size: 12px;
-  }
-
-  textarea.form-control {
-    height: 160px;
-    resize: none;
   }
 }
