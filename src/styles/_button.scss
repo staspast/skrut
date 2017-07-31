@@ -1,6 +1,6 @@
 a {
-  display: block;
   color: #000;
+  display: block;
 
   &:hover {
     color: #000;
@@ -9,14 +9,14 @@ a {
 }
 
 button {
-  cursor: pointer;
   background-color: #40b572;
   border: none;
   border-radius: 3px;
   color: #fff;
-  padding: 8px 15px;
+  cursor: pointer;
   float: right;
   margin-bottom: 20px;
+  padding: 8px 15px;
   transition: background-color 0.2s ease;
 
   &:hover {

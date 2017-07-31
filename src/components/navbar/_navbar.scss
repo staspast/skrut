@@ -54,23 +54,23 @@
         width: 20px;
       }
     }
-  }
-}
 
-.navbar-nav > li > .dropdown-menu {
-  background: #000;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 3px;
-  min-width: 75px;
+    & > .dropdown-menu {
+      background: #000;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 3px;
+      min-width: 75px;
 
-  & > li > a {
-    color: #7a7a7a;
-    font-size: 16px;
-    font-weight: 300;
+      & > li > a {
+        color: #7a7a7a;
+        font-size: 16px;
+        font-weight: 300;
 
-    &:hover {
-      background: transparent;
-      color: #fff;
+        &:hover {
+          background: transparent;
+          color: #fff;
+        }
+      }
     }
   }
 }
