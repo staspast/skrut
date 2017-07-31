@@ -5,11 +5,10 @@ const PriceInformation = () =>
     <div className="price">
         <div className="price__title">Вартість проживання</div>
 
-        <div>
+        <div className="price__description">
             Вартість проживання буде залежати як від сезону так і від тривалості перебування у нас. Орієнтовні ціни наводимо
             нижче, але обов'язко сконтактуйте з нами для уточнення. Орієнтовні ціни на проживання за номер грн.
         </div>
-
 
         <Table striped bordered condensed hover>
             <thead>

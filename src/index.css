@@ -450,3 +450,11 @@ video {
   @media (min-width: 992px) {
     .form__custom {
       margin: 0; } }
+
+.price__title {
+  font-size: 26px;
+  line-height: 34px;
+  margin: 20px 0 10px; }
+
+.price__description {
+  margin-bottom: 10px; }
