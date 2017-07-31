@@ -1,0 +1,78 @@
+.navbar {
+  background: #000;
+  padding: 5px;
+
+  &__component {
+    margin-top: 61px;
+  }
+
+  .navbar-toggle {
+    border-color: transparent;
+
+    &:hover, &:focus {
+      background: transparent;
+    }
+  }
+
+  .navbar-brand {
+    color: #fff;
+  }
+
+  .navbar-nav > li {
+    padding: 7px 0;
+
+    &:nth-of-type(6) {
+      display: none;
+
+      @media (min-width: 768px) {
+        display: block;
+      }
+
+      & > a:hover {
+        border-color: transparent;
+        cursor: default;
+      }
+    }
+
+    & > a {
+      box-sizing: border-box;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 300;
+      padding: 7px 15px;
+
+      &:hover, &:active {
+        border: 1px solid rgba(255, 255, 255, .5);
+        border-radius: 3px;
+        color: #fff;
+        padding: 6px 14px;
+      }
+
+      img {
+        bottom: 2px;
+        position: relative;
+        width: 20px;
+      }
+    }
+
+    & > .dropdown-menu {
+      background: #000;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 3px;
+      min-width: 75px;
+
+      & > li > a {
+        color: #7a7a7a;
+        font-size: 16px;
+        font-weight: 300;
+
+        &:hover {
+          background: transparent;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@import "popover/popover";
