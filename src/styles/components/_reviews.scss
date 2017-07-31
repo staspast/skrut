@@ -14,19 +14,21 @@
     }
 
     &:before, &:after {
-      background: red url("images/quote.svg");
+      background: #fff url("images/quote.svg") center no-repeat;
+      background-size: 60%;
       content: '';
       display: block;
-      height: 30px;
+      height: 60px;
       position: absolute;
-      top: -15px;
-      width: 30px;
+      top: -35px;
+      width: 60px;
     }
 
     &:after {
-      bottom: 25px;
+      bottom: 10px;
       right: 30px;
       top: auto;
+      transform: rotate(180deg);
     }
   }
 

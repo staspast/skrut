@@ -1,87 +1,104 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Header from  './Header';
+import ModalStructure from  '../containers/Modal';
 import {Grid, Row, Col} from  'react-bootstrap';
 
-const Reviews = () =>
-    <div className="reviews">
-        <Header/>
+const Description = {
+    test: 'test',
+    button: 'Add new review'
+};
 
-        <Grid>
-            <Row>
-                <Col xs={12}>
-                    <button> Add new review </button>
-                </Col>
-            </Row>
-            <Row>
-                <Col xs={12}>
-                    <div className="reviews__page">
-                        <div className="reviews__data">
-                            <div className="reviews__data--name">Andriy Spas</div>
-                            <div className="reviews__data--city">Lviv</div>
-                            <div className="reviews__data--description">
-                                Lorem Ipsum is simply text of the printing and typesetting industry is simply text of
-                                the printing and typesetting industry. Lorem Ipsum is simply text of the printing and typesetting
-                                industry is simply text of the printing and typesetting industry. Lorem Ipsum is simply text of the
-                                printing and typesetting industry is simply text of
-                                the printing and typesetting industry.
+class Reviews extends Component {
+    render() {
+        return (
+            <div className="reviews">
+                <Header/>
+
+                <Grid>
+                    <Row>
+                        <Col xs={12}>
+                            <ModalStructure description={ Description }/>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col xs={12}>
+                            <div className="reviews__page">
+                                <div className="reviews__data">
+                                    <div className="reviews__data--name">Andriy Spas</div>
+                                    <div className="reviews__data--city">Lviv</div>
+                                    <div className="reviews__data--description">
+                                        Lorem Ipsum is simply text of the printing and typesetting industry is simply text
+                                        of the printing and typesetting industry. Lorem Ipsum is simply text of the printing and typesetting
+                                        industry is simply text of the printing and typesetting industry. Lorem Ipsum is simply text of the
+                                        printing and typesetting industry is simply text of
+                                        the printing and typesetting industry.
+                                    </div>
+                                </div>
+
+                                <div className="reviews__date">
+                                    <div className="reviews__date--day">12</div>
+                                    <div className="reviews__date--month">July</div>
+                                    <div className="reviews__date--year">2017</div>
+                                </div>
                             </div>
-                        </div>
+                        </Col>
 
-                        <div className="reviews__date">
-                            <div className="reviews__date--day">12</div>
-                            <div className="reviews__date--month">July</div>
-                            <div className="reviews__date--year">2017</div>
-                        </div>
-                    </div>
-                </Col>
+                        <Col xs={12}>
+                            <div className="reviews__page">
+                                <div className="reviews__data">
+                                    <div className="reviews__data--name">Andriy Spas</div>
+                                    <div className="reviews__data--city">Lviv</div>
+                                    <div className="reviews__data--description">
+                                        Lorem Ipsum is simply text of the printing and typesetting industry is simply text
+                                        of
+                                        the printing and typesetting industry. Lorem Ipsum is simply text of the printing
+                                        and typesetting
+                                        industry is simply text of the printing and typesetting industry. Lorem Ipsum is
+                                        simply text of the
+                                        printing and typesetting industry is simply text of
+                                        the printing and typesetting industry.
+                                    </div>
+                                </div>
 
-                <Col xs={12}>
-                    <div className="reviews__page">
-                        <div className="reviews__data">
-                            <div className="reviews__data--name">Andriy Spas</div>
-                            <div className="reviews__data--city">Lviv</div>
-                            <div className="reviews__data--description">
-                                Lorem Ipsum is simply text of the printing and typesetting industry is simply text of
-                                the printing and typesetting industry. Lorem Ipsum is simply text of the printing and typesetting
-                                industry is simply text of the printing and typesetting industry. Lorem Ipsum is simply text of the
-                                printing and typesetting industry is simply text of
-                                the printing and typesetting industry.
+                                <div className="reviews__date">
+                                    <div className="reviews__date--day">12</div>
+                                    <div className="reviews__date--month">July</div>
+                                    <div className="reviews__date--year">2017</div>
+                                </div>
                             </div>
-                        </div>
+                        </Col>
 
-                        <div className="reviews__date">
-                            <div className="reviews__date--day">12</div>
-                            <div className="reviews__date--month">July</div>
-                            <div className="reviews__date--year">2017</div>
-                        </div>
-                    </div>
-                </Col>
+                        <Col xs={12}>
+                            <div className="reviews__page">
+                                <div className="reviews__data">
+                                    <div className="reviews__data--name">Andriy Spas</div>
+                                    <div className="reviews__data--city">Lviv</div>
+                                    <div className="reviews__data--description">
+                                        Lorem Ipsum is simply text of the printing and typesetting industry is simply text
+                                        of
+                                        the printing and typesetting industry. Lorem Ipsum is simply text of the printing
+                                        and typesetting
+                                        industry is simply text of the printing and typesetting industry. Lorem Ipsum is
+                                        simply text of the
+                                        printing and typesetting industry is simply text of
+                                        the printing and typesetting industry.
+                                    </div>
+                                </div>
 
-                <Col xs={12}>
-                    <div className="reviews__page">
-                        <div className="reviews__data">
-                            <div className="reviews__data--name">Andriy Spas</div>
-                            <div className="reviews__data--city">Lviv</div>
-                            <div className="reviews__data--description">
-                                Lorem Ipsum is simply text of the printing and typesetting industry is simply text of
-                                the printing and typesetting industry. Lorem Ipsum is simply text of the printing and typesetting
-                                industry is simply text of the printing and typesetting industry. Lorem Ipsum is simply text of the
-                                printing and typesetting industry is simply text of
-                                the printing and typesetting industry.
+                                <div className="reviews__date">
+                                    <div className="reviews__date--day">12</div>
+                                    <div className="reviews__date--month">July</div>
+                                    <div className="reviews__date--year">2017</div>
+                                </div>
                             </div>
-                        </div>
+                        </Col>
+                    </Row>
 
-                        <div className="reviews__date">
-                            <div className="reviews__date--day">12</div>
-                            <div className="reviews__date--month">July</div>
-                            <div className="reviews__date--year">2017</div>
-                        </div>
-                    </div>
-                </Col>
-            </Row>
+                </Grid>
 
-        </Grid>
-
-    </div>;
+            </div>
+        )
+    }
+}
 
 export default Reviews;

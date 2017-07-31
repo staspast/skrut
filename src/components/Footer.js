@@ -33,7 +33,7 @@ const Footer = () =>
                     </ul>
                 </Col>
 
-                <Col xs={12} pullRight>
+                <Col xs={12}>
                     <div className="footer__copyright">Copyright © Skrut 2017</div>
                 </Col>
             </Row>

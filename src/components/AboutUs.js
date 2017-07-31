@@ -5,6 +5,7 @@ import {Grid, Row, Col} from  'react-bootstrap';
 const AboutUs = () =>
     <div className="about-us">
         <Header/>
+
         <Grid>
             <Row>
                 <Col xs={12}>
