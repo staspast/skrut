@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from  './Header';
-import {Grid, Row, Col, Button} from  'react-bootstrap';
+import {Grid, Row, Col} from  'react-bootstrap';
 
 const Reviews = () =>
     <div className="reviews">
@@ -9,7 +9,7 @@ const Reviews = () =>
         <Grid>
             <Row>
                 <Col xs={12}>
-                    <Button pullRight> Add new review </Button>
+                    <button> Add new review </button>
                 </Col>
             </Row>
             <Row>
