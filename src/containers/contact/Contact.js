@@ -3,6 +3,8 @@ import {Grid, Form, FormGroup, FormControl, Row, Col } from  'react-bootstrap'
 import Header from  '../../components/header/Header';
 import SimpleMapExample from '../map/Map';
 
+import Notification from '../notification/Notification'
+
 class Contact extends Component {
     constructor() {
         super();
@@ -191,7 +193,7 @@ class Contact extends Component {
                             </Form>
 
                             <button
-                                className="pull-right"
+                                className="button pull-right"
                                 disabled={ !this.inputsValid() }
                                 type="submit"
                             >
@@ -202,6 +204,8 @@ class Contact extends Component {
                 </Grid>
 
                 <SimpleMapExample/>
+
+                <Notification/>
             </div>
         )
     }

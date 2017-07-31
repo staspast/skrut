@@ -4,7 +4,7 @@ import ModalStructure from  '../../containers/modal/Modal';
 import {Grid, Row, Col} from  'react-bootstrap';
 
 const Description = {
-    test: 'test',
+    review: 'Залиште свій відгук',
     button: 'Add new review'
 };
 
@@ -20,6 +20,7 @@ class Reviews extends Component {
                             <ModalStructure description={ Description }/>
                         </Col>
                     </Row>
+
                     <Row>
                         <Col xs={12}>
                             <div className="reviews__page">
@@ -93,9 +94,7 @@ class Reviews extends Component {
                             </div>
                         </Col>
                     </Row>
-
                 </Grid>
-
             </div>
         )
     }

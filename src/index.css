@@ -25,7 +25,7 @@ a {
     color: #000;
     text-decoration: none; }
 
-button {
+.button {
   background-color: #40b572;
   border: none;
   border-radius: 3px;
@@ -35,7 +35,7 @@ button {
   margin-bottom: 20px;
   padding: 8px 15px;
   transition: background-color 0.2s ease; }
-  button:hover {
+  .button:hover {
     background-color: #379c62; }
 
 .form button {
@@ -59,7 +59,8 @@ button {
 
 .navbar {
   background: #000;
-  padding: 5px; }
+  padding: 5px;
+  text-align: center; }
   .navbar__component {
     margin-top: 61px; }
   .navbar .navbar-toggle {
@@ -68,6 +69,8 @@ button {
       background: transparent; }
   .navbar .navbar-brand {
     color: #fff; }
+  .navbar-fixed-top .navbar-collapse {
+    max-height: 100%; }
   .navbar .navbar-nav > li {
     padding: 7px 0; }
     .navbar .navbar-nav > li:nth-of-type(6) {
@@ -95,9 +98,13 @@ button {
         width: 20px; }
     .navbar .navbar-nav > li > .dropdown-menu {
       background: #000;
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      border-radius: 3px;
-      min-width: 75px; }
+      border: none;
+      min-width: 75px;
+      text-align: center; }
+      @media (min-width: 768px) {
+        .navbar .navbar-nav > li > .dropdown-menu {
+          border: 1px solid rgba(255, 255, 255, 0.5);
+          border-radius: 3px; } }
       .navbar .navbar-nav > li > .dropdown-menu > li > a {
         color: #7a7a7a;
         font-size: 16px;
@@ -115,8 +122,10 @@ button {
     color: #fff;
     font-weight: 300; }
 
-.popover.bottom > .arrow:after {
-  border-bottom-color: #000; }
+.popover.bottom {
+  margin-top: 20px; }
+  .popover.bottom > .arrow:after {
+    border-bottom-color: #000; }
 
 .header {
   background: url("images/mountains_river.png") 50% 50%;

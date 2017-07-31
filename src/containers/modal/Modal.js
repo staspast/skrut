@@ -29,12 +29,10 @@ class ModalStructure extends Component {
                 >
 
                     <Modal.Header closeButton>
-                        <Modal.Title id="contained-modal-title-lg">Modal heading</Modal.Title>
+                        <Modal.Title id="contained-modal-title-lg">{ this.props.description.review }</Modal.Title>
                     </Modal.Header>
 
                     <Modal.Body className="clearfix form">
-                        <h4>{ this.props.description.test }</h4>
-
                         <Form autoComplete="off">
                             <Row>
                                 <Col xs={6}>
@@ -47,17 +45,6 @@ class ModalStructure extends Component {
                                 </Col>
 
                                 <Col xs={6}>
-                                    <FormGroup controlId="surnameText">
-
-                                        <FormControl
-                                            type="text"
-                                            placeholder="Surname"
-                                        />
-                                    </FormGroup>
-
-                                </Col>
-
-                                <Col xs={12}>
                                     <FormGroup controlId="cityText">
 
                                         <FormControl
@@ -79,7 +66,7 @@ class ModalStructure extends Component {
                         </Form>
 
                         <button
-                            className="pull-right"
+                            className="button pull-right"
                             type="submit"
                         >
                             Send review
@@ -88,7 +75,7 @@ class ModalStructure extends Component {
 
                 </Modal>
 
-                <button onClick={ this.open }>{ this.props.description.button }</button>
+                <button className="button" onClick={ this.open }>{ this.props.description.button }</button>
             </div>
         );
     }

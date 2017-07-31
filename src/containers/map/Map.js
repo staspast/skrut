@@ -23,7 +23,6 @@ export default class StyledMapExample extends Component {
                     <div style={{ height: `400px` }} />
                 }
                 center={ new google.maps.LatLng(25.03, 121.6) }
-                onClickFromChildrenOfInfoBox={ this.handleClickFromChildrenOfInfoBox }
             />
         );
     }
