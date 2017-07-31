@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Header = () =>
-    <header>
-        <div className="header-title">
+    <header className="header">
+        <div className="header__title">
             <h1>
                 Lorem Ipsum is simply
             </h1>

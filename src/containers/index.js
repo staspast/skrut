@@ -1,7 +1,8 @@
-import Contact from './Contact';
-import LightboxGallery from './LightboxGallery';
-import Map from './Map';
+import Contact from './contact/Contact';
+import LightboxGallery from './lightbox/LightboxGallery';
+import Map from './map/Map';
+import Modal from './modal/Modal';
 
 export {
-    Contact, LightboxGallery, Map,
+    Contact, LightboxGallery, Map, Modal
 }

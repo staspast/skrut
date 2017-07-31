@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import LightboxGallery from '../containers/LightboxGallery';
-import Header from '../components/Header';
+import LightboxGallery from '../../containers/lightbox/LightboxGallery';
+import {GalleryItems} from "../../constants/Images.js";
+import Header from '../header/Header';
 import {Grid, Row, Col} from  'react-bootstrap';
-import {GalleryItems} from "../constants/Images.js";
 
 class Gallery extends Component {
     render() {

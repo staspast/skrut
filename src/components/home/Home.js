@@ -1,11 +1,11 @@
 import React from 'react';
-import Tile from './Tile';
-import Video from './Video';
+import Tile from './tile/Tile';
+import Video from './video/Video';
 
 const Home = () =>
-    <div>
-        <section className="background">
-            <div className="header-title">
+    <section>
+        <div className="home">
+            <div className="header__title">
                 <h1>
                     Lorem Ipsum is simply
                 </h1>
@@ -15,9 +15,9 @@ const Home = () =>
             </div>
 
             <Video/>
-        </section>
+        </div>
 
         <Tile/>
-    </div>;
+    </section>;
 
 export default Home;

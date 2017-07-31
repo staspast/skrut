@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import { withGoogleMap, GoogleMap } from "react-google-maps/lib";
-import StyleMap from "../constants/StyleMap.json";
+import StyleMap from "../../constants/StyleMap.json";
 
 const StyledMapExampleGoogleMap = withGoogleMap( props => (
     <GoogleMap

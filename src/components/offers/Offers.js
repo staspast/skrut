@@ -1,9 +1,9 @@
 import React from 'react';
 import {Grid, Row, Col, Tab, Tabs} from  'react-bootstrap';
-import Header from  './Header';
-import LightboxGallery from '../containers/LightboxGallery';
-import {GalleryItems} from "../constants/Images.js";
-import PriceInformation from "./Price.js";
+import Header from  '../header/Header';
+import LightboxGallery from '../../containers/lightbox/LightboxGallery';
+import {GalleryItems} from "../../constants/Images.js";
+import PriceInformation from "./price/Price.js";
 
 const Offers = () =>
     <div className="offers">

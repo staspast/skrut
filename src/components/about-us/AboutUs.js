@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from  './Header';
+import Header from  '../header/Header';
 import {Grid, Row, Col} from  'react-bootstrap';
 
 const AboutUs = () =>
@@ -47,7 +47,9 @@ const AboutUs = () =>
 
             <Row>
                 <Col xs={12} className="about-us__image">
-                    <img src="http://media.istockphoto.com/photos/carpathian-mountains-yaremche-ivanofrankivska-oblast-ukraine-mountain-picture-id641062512" alt=""/>
+                    <img
+                        src="http://media.istockphoto.com/photos/carpathian-mountains-yaremche-ivanofrankivska-oblast-ukraine-mountain-picture-id641062512"
+                        alt=""/>
                 </Col>
             </Row>
 
@@ -83,7 +85,9 @@ const AboutUs = () =>
                 </Col>
 
                 <Col xs={12} sm={6} className="about-us__image">
-                    <img src="http://media.istockphoto.com/photos/carpathian-mountains-yaremche-ivanofrankivska-oblast-ukraine-mountain-picture-id641062512" alt=""/>
+                    <img
+                        src="http://media.istockphoto.com/photos/carpathian-mountains-yaremche-ivanofrankivska-oblast-ukraine-mountain-picture-id641062512"
+                        alt=""/>
                 </Col>
             </Row>
 
@@ -113,7 +117,9 @@ const AboutUs = () =>
 
                 <Col xs={12} sm={6} smPull={6}>
                     <div className="about-us__image">
-                        <img src="http://media.istockphoto.com/photos/carpathian-mountains-yaremche-ivanofrankivska-oblast-ukraine-mountain-picture-id641062512" alt=""/>
+                        <img
+                            src="http://media.istockphoto.com/photos/carpathian-mountains-yaremche-ivanofrankivska-oblast-ukraine-mountain-picture-id641062512"
+                            alt=""/>
                     </div>
                 </Col>
             </Row>

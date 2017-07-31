@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Grid, Form, FormGroup, FormControl, Row, Col } from  'react-bootstrap'
-import Header from  '../components/Header';
-import SimpleMapExample from '../containers/Map';
+import Header from  '../../components/header/Header';
+import SimpleMapExample from '../map/Map';
 
 class Contact extends Component {
     constructor() {

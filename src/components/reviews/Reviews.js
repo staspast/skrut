@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Header from  './Header';
-import ModalStructure from  '../containers/Modal';
+import Header from  '../header/Header';
+import ModalStructure from  '../../containers/modal/Modal';
 import {Grid, Row, Col} from  'react-bootstrap';
 
 const Description = {

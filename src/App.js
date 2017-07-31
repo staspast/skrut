@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Home,  AboutUs,  Offers,  Gallery, Footer, NavigationBar, Reviews } from './components/index';
 import { Contact } from './containers/index';
 
-import './App.css';
-
 class App extends Component {
     render() {
         return (

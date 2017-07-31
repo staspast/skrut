@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Row, Col } from  'react-bootstrap';
+import {Grid, Row, Col} from  'react-bootstrap';
 
 const Footer = () =>
     <footer className="footer">
@@ -17,17 +17,17 @@ const Footer = () =>
                     <div className="footer__title">Contact Us</div>
                     <ul className="footer__contact-us">
                         <li>
-                            <img src={require('../images/placeholder.svg')} alt=""/>
+                            <img src={require('../../images/placeholder.svg')} alt=""/>
                             <div className="footer__contact-us--address">
                                 <div>вул. Хоткевича 5/2, м. Яремче, <br/> Ів-Франківська обл.</div>
                             </div>
                         </li>
                         <li>
-                            <img src={require('../images/phone-call-black.svg')} alt=""/>
+                            <img src={require('../../images/phone-call-black.svg')} alt=""/>
                             <span>+38 096 355 28 25</span>
                         </li>
                         <li>
-                            <img src={require('../images/mail.svg')} alt=""/>
+                            <img src={require('../../images/mail.svg')} alt=""/>
                             <span>skrut@online.ua</span>
                         </li>
                     </ul>
