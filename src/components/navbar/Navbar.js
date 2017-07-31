@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Navbar, NavItem, NavDropdown, MenuItem, Nav, OverlayTrigger} from  'react-bootstrap';
-import PopoverPhone from './Popover';
+import PopoverPhone from './popover/Popover';
 import {FormattedMessage} from 'react-intl'
 
 class NavigationBar extends Component {

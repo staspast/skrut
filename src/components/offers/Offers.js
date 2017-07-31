@@ -1,8 +1,9 @@
 import React from 'react';
 import {Grid, Row, Col, Tab, Tabs} from  'react-bootstrap';
-import Header from  './Header';
-import LightboxGallery from '../containers/LightboxGallery';
-import {GalleryItems} from "../constants/Images.js";
+import {Header} from  '../index';
+import PriceInformation from './price/Price'
+import {LightboxGallery} from '../../containers';
+import {GalleryItems} from "../../constants/Images.js";
 import {FormattedMessage} from 'react-intl'
 
 const Offers = () =>

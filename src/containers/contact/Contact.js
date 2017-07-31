@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import {Grid, FormGroup, FormControl, Row, Col, Button} from  'react-bootstrap'
-import Header from  '../components/Header';
-import SimpleMapExample from '../containers/Map';
+import {Grid, FormGroup, FormControl, Row, Col, Button, Form} from  'react-bootstrap'
+import {Header} from  '../../components';
+import {Map} from '../../containers';
 import {FormattedMessage} from 'react-intl'
 
 class Contact extends Component {
@@ -202,7 +202,7 @@ class Contact extends Component {
                     </Row>
                 </Grid>
 
-                <SimpleMapExample/>
+                <Map/>
             </div>
         )
     }

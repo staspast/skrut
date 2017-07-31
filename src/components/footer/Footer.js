@@ -21,17 +21,17 @@ const Footer = () =>
                     </div>
                     <ul className="footer__contact-us">
                         <li>
-                            <img src={require('../images/placeholder.svg')} alt=""/>
+                            <img src={require('../../images/placeholder.svg')} alt=""/>
                             <div className="footer__contact-us--address">
                                 <div><FormattedMessage id="contact.street"/> <FormattedMessage id="contact.town"/> <br/> <FormattedMessage id="contact.region"/></div>
                             </div>
                         </li>
                         <li>
-                            <img src={require('../images/phone-call-black.svg')} alt=""/>
+                            <img src={require('../../images/phone-call-black.svg')} alt=""/>
                             <span>+38 096 355 28 25</span>
                         </li>
                         <li>
-                            <img src={require('../images/mail.svg')} alt=""/>
+                            <img src={require('../../images/mail.svg')} alt=""/>
                             <span>skrut@online.ua</span>
                         </li>
                     </ul>
