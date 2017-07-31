@@ -18,7 +18,9 @@ class Contact extends Component {
             message: '',
             nameValid: false,
             emailValid: false,
-            messageValid: false
+            messageValid: false,
+            success: false,
+            error: false
         }
     }
 
@@ -64,7 +66,11 @@ class Contact extends Component {
             this.state.email + '&message=' +
             this.state.message, {method: 'GET'})
             .then((res) => {
-                console.log(res)
+                if(res.status === 200) {
+                    this.setState({success: true});
+                } else {
+                    this.setState({error: true});
+                }
             });
 
         e.preventDefault()
@@ -120,7 +126,7 @@ class Contact extends Component {
                             </Row>
                         </Col>
 
-                        <Col md={6} className="contact__form">
+                        <Col md={6} className="form form__custom">
                             <div className="contact__title"><FormattedMessage id="contact.form"/> </div>
 
                             <Form
@@ -191,22 +197,30 @@ class Contact extends Component {
                                         </FormGroup>
                                     </Col>
                                 </Row>
-                            </Form>
 
-                            <button
-                                className="button pull-right"
-                                disabled={ !this.inputsValid() }
-                                type="submit"
-                            >
-                                Send mail
-                            </button>
+                                <Row>
+                                    <Col xs={12}>
+                                        <button
+                                            className="button pull-right"
+                                            disabled={ !this.inputsValid() }
+                                            type="submit"
+                                        >
+                                            Send mail
+                                        </button>
+                                    </Col>
+                                </Row>
+                            </Form>
                         </Col>
                     </Row>
                 </Grid>
 
                 <Map/>
 
-                <Notification/>
+                <Notification
+                    success={ this.state.success }
+                    error={ this.state.error }
+                />
+
             </div>
         )
     }

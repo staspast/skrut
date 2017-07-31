@@ -4,25 +4,34 @@ import NotificationSystem from 'react-notification-system';
 class Notification extends Component {
     constructor() {
         super();
-        this._notificationSystem = null;
+
+        this.state = {
+            notificationSystem: null
+        }
     }
 
-    _addNotification(event) {
-        event.preventDefault();
+    addNotification = (level, message) => {
+        this.state.notificationSystem.addNotification({
+            message: message,
+            level: level
+        });
+    };
 
-        if (this._notificationSystem) {
-            this._notificationSystem.addNotification({
-                message: 'Notification message',
-                level: 'success'
-            });
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.success === true) {
+            this.addNotification('success', 'success');
+
+        }
+
+        if (nextProps.error === true) {
+            this.addNotification('error', 'error');
         }
     }
 
     render() {
         return (
             <div>
-                <button onClick={this._addNotification.bind(this)}>Add notification</button>
-                <NotificationSystem ref={n => this._notificationSystem = n} />
+                <NotificationSystem ref={n => this.state.notificationSystem = n} />
             </div>
         );
     }
