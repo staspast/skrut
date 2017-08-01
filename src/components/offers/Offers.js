@@ -7,15 +7,15 @@ import {GalleryItems} from "../../constants/Images.js";
 import {FormattedMessage} from 'react-intl'
 
 const HeaderTitle = {
-    title: "Апартаменти",
-    name: 'садиби "У діда Віктора"'
+    title: "header.title.offers",
+    name: 'header.name'
 };
 
 class Offers extends Component {
     render() {
         return (
             <div className="offers">
-                <Header title={HeaderTitle}/>
+                <Header header={HeaderTitle}/>
 
                 <Grid>
                     <Tabs defaultActiveKey={1} id="offers__tabs">

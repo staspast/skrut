@@ -7,7 +7,7 @@ import Notification from '../notification/Notification'
 
 const HeaderTitle = {
     title: "header.title.contact",
-    name: 'header.name.contact'
+    name: 'header.name'
 };
 
 class Contact extends Component {
