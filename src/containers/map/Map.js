@@ -8,7 +8,7 @@ const StyledMapExampleGoogleMap = withGoogleMap( props => (
     <GoogleMap
         defaultZoom={18}
         defaultCenter={ props.center }
-        defaultOptions={{ styles: StyleMap }}
+        defaultOptions={{ styles: StyleMap, scrollwheel: false }}
     >
       <Marker
         position={{lat: 48.450210, lng: 24.557167}}
