@@ -42,14 +42,6 @@ class Contact extends Component {
         this.setState({name: event.target.value})
     };
 
-    handleSurnameChange = (event) => {
-        this.setState({surname: event.target.value})
-    };
-
-    handlePhoneChange = (event) => {
-        this.setState({phone: event.target.value})
-    };
-
     handleEmailChange = (event) => {
         this.setState({email: event.target.value})
     };
@@ -148,13 +140,9 @@ class Contact extends Component {
 
                                     <Col xs={6}>
                                         <FormGroup controlId="surnameText">
-
                                             <FormControl
-                                                className={ this.validateEmail(this.state.surname) ? '' : 'has-error' }
                                                 type="text"
                                                 placeholder="Surname"
-                                                value={ this.state.surname }
-                                                onChange={ this.handleSurnameChange }
                                             />
                                         </FormGroup>
 
@@ -162,13 +150,9 @@ class Contact extends Component {
 
                                     <Col xs={6}>
                                         <FormGroup controlId="phoneText">
-
                                             <FormControl
-                                                className={ this.validateNotEmpty(this.state.phone) ? '' : 'has-error' }
                                                 type="text"
                                                 placeholder="Phone"
-                                                value={ this.state.phone }
-                                                onChange={ this.handlePhoneChange }
                                             />
                                         </FormGroup>
                                     </Col>
