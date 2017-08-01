@@ -3,6 +3,17 @@
     position: relative;
   }
 
+  &__title {
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 20px;
+    text-align: left;
+
+    @media (min-width: 768px) {
+      margin-bottom: 40px;
+    }
+  }
+
   &__page {
     border: 1px solid #e7e7e7;
     padding: 30px 20px;

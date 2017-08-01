@@ -63,14 +63,14 @@ class ModalStructure extends Component {
                                     </FormGroup>
                                 </Col>
                             </Row>
-                        </Form>
 
-                        <button
-                            className="button pull-right"
-                            type="submit"
-                        >
-                            Send review
-                        </button>
+                            <button
+                                className="button pull-right"
+                                type="submit"
+                            >
+                                Send review
+                            </button>
+                        </Form>
                     </Modal.Body>
 
                 </Modal>

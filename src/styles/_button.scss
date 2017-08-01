@@ -22,4 +22,8 @@ a {
   &:hover {
     background-color: #379c62;
   }
+
+  &:disabled {
+    background-color: rgba(64,181,114, 0.5);
+  }
 }

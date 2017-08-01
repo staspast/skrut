@@ -37,6 +37,8 @@ a {
   transition: background-color 0.2s ease; }
   .button:hover {
     background-color: #379c62; }
+  .button:disabled {
+    background-color: rgba(64, 181, 114, 0.5); }
 
 .form button {
   font-size: 12px; }
@@ -96,6 +98,12 @@ a {
         bottom: 2px;
         position: relative;
         width: 20px; }
+      @media (min-width: 768px) {
+        .navbar .navbar-nav > li > a {
+          font-size: 14px; } }
+      @media (min-width: 992px) {
+        .navbar .navbar-nav > li > a {
+          font-size: 16px; } }
     .navbar .navbar-nav > li > .dropdown-menu {
       background: #000;
       border: none;
@@ -125,7 +133,7 @@ a {
 .popover.bottom {
   margin-top: 20px; }
   .popover.bottom > .arrow:after {
-    border-bottom-color: #000; }
+    border-bottom-color: rgba(255, 255, 255, 0.6); }
 
 .header {
   background: url("images/mountains_river.png") 50% 50%;
@@ -273,7 +281,7 @@ a {
 
 .home {
   background: rgba(0, 0, 0, 0.6);
-  height: 100vh;
+  height: calc(100vh - 60px);
   overflow: hidden;
   position: relative; }
 
@@ -336,6 +344,15 @@ video {
 
 .reviews .container {
   position: relative; }
+
+.reviews__title {
+  font-size: 26px;
+  line-height: 34px;
+  margin-bottom: 20px;
+  text-align: left; }
+  @media (min-width: 768px) {
+    .reviews__title {
+      margin-bottom: 40px; } }
 
 .reviews__page {
   border: 1px solid #e7e7e7;
@@ -470,3 +487,5 @@ video {
     margin-bottom: 40px; }
   .contact h4 {
     margin: 20px 0; }
+  .contact .hide__button {
+    visibility: hidden; }

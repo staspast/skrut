@@ -3,8 +3,12 @@ import {Grid, FormGroup, FormControl, Row, Col, Button, Form} from  'react-boots
 import {Header} from  '../../components';
 import {Map} from '../../containers';
 import {FormattedMessage} from 'react-intl'
-
 import Notification from '../notification/Notification'
+
+const HeaderTitle = {
+    title: "header.title.contact",
+    name: 'header.name.contact'
+};
 
 class Contact extends Component {
     constructor() {
@@ -20,9 +24,15 @@ class Contact extends Component {
             emailValid: false,
             messageValid: false,
             success: false,
-            error: false
+            error: false,
+            visibility: false
         }
     }
+
+    toggleClass = () => {
+        const currentState = this.state.visibility;
+        this.setState({ visibility: !currentState });
+    };
 
     validateNotEmpty = (value) => {
         return value !== '' && value !== undefined
@@ -51,6 +61,7 @@ class Contact extends Component {
     };
 
     sendEmail = (e) => {
+        this.toggleClass();
         fetch('https://script.google.com/macros/s/AKfycbwcAOuP_lwPBboegRx3dJouQVAdtGQVmL1N28AgO_pKePIsWYTX/exec?name=' +
             this.state.name + '&mail=' +
             this.state.surname + '&surname=' +
@@ -58,11 +69,14 @@ class Contact extends Component {
             this.state.email + '&message=' +
             this.state.message, {method: 'GET'})
             .then((res) => {
-                if(res.status === 200) {
-                    this.setState({success: true});
+                if(res.status == 200) {
+                    this.setState({ success: true });
+                    this.toggleClass();
                 } else {
-                    this.setState({error: true});
+                    this.setState({ error: true });
                 }
+
+                this.setState({ success: false });
             });
 
         e.preventDefault()
@@ -71,7 +85,7 @@ class Contact extends Component {
     render() {
         return (
             <div className="contact">
-                <Header/>
+                <Header header={ HeaderTitle }/>
 
                 <Grid>
                     <Row>
@@ -183,7 +197,7 @@ class Contact extends Component {
                                     </Col>
                                 </Row>
 
-                                <Row>
+                                <Row className={ this.state.visibility ? 'hide__button': null } >
                                     <Col xs={12}>
                                         <button
                                             className="button pull-right"

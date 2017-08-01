@@ -19,19 +19,20 @@ class Notification extends Component {
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.success === true) {
-            this.addNotification('success', 'success');
-
+            let message = 'success';
+            this.addNotification('success', message);
         }
 
         if (nextProps.error === true) {
-            this.addNotification('error', 'error');
+            let message = 'error';
+            this.addNotification('error', message);
         }
     }
 
     render() {
         return (
             <div>
-                <NotificationSystem ref={n => this.state.notificationSystem = n} />
+                <NotificationSystem ref={ n => this.state.notificationSystem = n } />
             </div>
         );
     }
