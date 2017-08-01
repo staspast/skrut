@@ -190,6 +190,7 @@ class Contact extends Component {
                                             <FormControl
                                                 className={ this.validateNotEmpty(this.state.message) ? '' : 'has-error' }
                                                 componentClass="textarea"
+                                                maxLength="1000"
                                                 placeholder="Message"
                                                 value={ this.state.message }
                                                 onChange={ this.handleMessageChange }
