@@ -3,6 +3,12 @@ import {Grid, FormGroup, FormControl, Row, Col, Button, Form} from  'react-boots
 import {Header} from  '../../components';
 import {Map} from '../../containers';
 import {FormattedMessage} from 'react-intl'
+import Notification from '../notification/Notification'
+
+const HeaderTitle = {
+    title: "header.title.contact",
+    name: 'header.name'
+};
 
 class Contact extends Component {
     constructor() {
@@ -13,9 +19,20 @@ class Contact extends Component {
             surname: '',
             phone: '',
             email: '',
-            message: ''
+            message: '',
+            nameValid: false,
+            emailValid: false,
+            messageValid: false,
+            success: false,
+            error: false,
+            visibility: false
         }
     }
+
+    toggleClass = () => {
+        const currentState = this.state.visibility;
+        this.setState({ visibility: !currentState });
+    };
 
     validateNotEmpty = (value) => {
         return value !== '' && value !== undefined
@@ -35,14 +52,6 @@ class Contact extends Component {
         this.setState({name: event.target.value})
     };
 
-    handleSurnameChange = (event) => {
-        this.setState({surname: event.target.value})
-    };
-
-    handlePhoneChange = (event) => {
-        this.setState({phone: event.target.value})
-    };
-
     handleEmailChange = (event) => {
         this.setState({email: event.target.value})
     };
@@ -52,7 +61,7 @@ class Contact extends Component {
     };
 
     sendEmail = (e) => {
-        console.log('fetch')
+        this.toggleClass();
         fetch('https://script.google.com/macros/s/AKfycbwcAOuP_lwPBboegRx3dJouQVAdtGQVmL1N28AgO_pKePIsWYTX/exec?name=' +
            this.state.name +
           '&mail=' + this.state.email +
@@ -61,7 +70,14 @@ class Contact extends Component {
           '&phone=' + this.state.phone,
              {method: 'GET'})
             .then((res) => {
-                console.log(res)
+                if(res.status == 200) {
+                    this.setState({ success: true });
+                    this.toggleClass();
+                } else {
+                    this.setState({ error: true });
+                }
+
+                this.setState({ success: false });
             });
 
         e.preventDefault()
@@ -70,7 +86,7 @@ class Contact extends Component {
     render() {
         return (
             <div className="contact">
-                <Header/>
+                <Header header={ HeaderTitle }/>
 
                 <Grid>
                     <Row>
@@ -117,10 +133,10 @@ class Contact extends Component {
                             </Row>
                         </Col>
 
-                        <Col md={6} className="contact__form">
+                        <Col md={6} className="form form__custom">
                             <div className="contact__title"><FormattedMessage id="contact.form"/> </div>
 
-                            <form
+                            <Form
                                 onSubmit={ this.sendEmail }
                                 autoComplete="off"
                             >
@@ -139,13 +155,9 @@ class Contact extends Component {
 
                                     <Col xs={6}>
                                         <FormGroup controlId="surnameText">
-
                                             <FormControl
-                                                className={ this.validateEmail(this.state.surname) ? '' : 'has-error' }
                                                 type="text"
                                                 placeholder="Surname"
-                                                value={ this.state.surname }
-                                                onChange={ this.handleSurnameChange }
                                             />
                                         </FormGroup>
 
@@ -153,13 +165,9 @@ class Contact extends Component {
 
                                     <Col xs={6}>
                                         <FormGroup controlId="phoneText">
-
                                             <FormControl
-                                                className={ this.validateNotEmpty(this.state.phone) ? '' : 'has-error' }
                                                 type="text"
                                                 placeholder="Phone"
-                                                value={ this.state.phone }
-                                                onChange={ this.handlePhoneChange }
                                             />
                                         </FormGroup>
                                     </Col>
@@ -181,6 +189,7 @@ class Contact extends Component {
                                             <FormControl
                                                 className={ this.validateNotEmpty(this.state.message) ? '' : 'has-error' }
                                                 componentClass="textarea"
+                                                maxLength="1000"
                                                 placeholder="Message"
                                                 value={ this.state.message }
                                                 onChange={ this.handleMessageChange }
@@ -188,20 +197,30 @@ class Contact extends Component {
                                         </FormGroup>
                                     </Col>
                                 </Row>
-                            </form>
 
-                            <Button
-                                className="pull-right"
-                                disabled={ !this.inputsValid() }
-                                type="submit"
-                            >
-                                Send mail
-                            </Button>
+                                <Row className={ this.state.visibility ? 'hide__button': null } >
+                                    <Col xs={12}>
+                                        <button
+                                            className="button pull-right"
+                                            disabled={ !this.inputsValid() }
+                                            type="submit"
+                                        >
+                                            Send mail
+                                        </button>
+                                    </Col>
+                                </Row>
+                            </Form>
                         </Col>
                     </Row>
                 </Grid>
 
                 <Map/>
+
+                <Notification
+                    success={ this.state.success }
+                    error={ this.state.error }
+                />
+
             </div>
         )
     }

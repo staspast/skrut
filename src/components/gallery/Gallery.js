@@ -4,11 +4,16 @@ import {GalleryItems} from "../../constants/Images.js";
 import Header from '../header/Header';
 import {Grid, Row, Col} from  'react-bootstrap';
 
+const HeaderTitle = {
+    title: "header.title.gallery",
+    name: 'header.name'
+};
+
 class Gallery extends Component {
     render() {
         return (
             <div className="gallery">
-                <Header/>
+                <Header header={HeaderTitle}/>
 
                 <Grid>
                     <Row>

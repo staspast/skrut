@@ -7,10 +7,10 @@ const Home = () =>
         <div className="home">
             <div className="header__title">
                 <h1>
-                    Lorem Ipsum is simply
+                    Садиба "У діда Віктора"
                 </h1>
                 <h2>
-                    text of the printing and typesetting industry.
+                    незабутній відпочинок у Карпатах
                 </h2>
             </div>
 

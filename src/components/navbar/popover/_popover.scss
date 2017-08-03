@@ -10,6 +10,10 @@
   }
 }
 
-.popover.bottom > .arrow:after {
-  border-bottom-color: #000;
+.popover.bottom {
+  margin-top: 20px;
+
+  & > .arrow:after {
+    border-bottom-color: rgba(255,255,255,.6);
+  }
 }

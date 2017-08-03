@@ -1,6 +1,6 @@
 .home {
   background: rgba(0, 0, 0, 0.6);
-  height: 100vh;
+  height: calc(100vh - 60px);
   overflow: hidden;
   position: relative;
 }

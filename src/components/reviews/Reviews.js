@@ -4,22 +4,31 @@ import ModalStructure from  '../../containers/modal/Modal';
 import {Grid, Row, Col} from  'react-bootstrap';
 
 const Description = {
-    test: 'test',
+    review: 'Будемо раді, якщо Ви поділитеся своїми враженнями про свій відпочинок.',
     button: 'Add new review'
+};
+
+const HeaderTitle = {
+    title: "header.title.reviews",
+    name: 'header.name.reviews'
 };
 
 class Reviews extends Component {
     render() {
         return (
             <div className="reviews">
-                <Header/>
+                <Header header={ HeaderTitle }/>
 
                 <Grid>
                     <Row>
-                        <Col xs={12}>
+                        <Col xs={12} sm={6}>
+                            <div className="reviews__title">Відгуки наших гостей</div>
+                        </Col>
+                        <Col xs={12} sm={6}>
                             <ModalStructure description={ Description }/>
                         </Col>
                     </Row>
+
                     <Row>
                         <Col xs={12}>
                             <div className="reviews__page">
@@ -93,9 +102,7 @@ class Reviews extends Component {
                             </div>
                         </Col>
                     </Row>
-
                 </Grid>
-
             </div>
         )
     }

@@ -1,16 +1,21 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {FormattedMessage} from 'react-intl'
 
-const Header = () =>
-    <header className="header">
-        <div className="header__title">
-            <h1>
-              <FormattedMessage id="header.part1"/>
-            </h1>
-            <h2>
-              <FormattedMessage id="header.part2"/>
-            </h2>
-        </div>
-    </header>;
+class Header extends Component {
+    render() {
+        return (
+            <header className="header">
+                <div className="header__title">
+                    <h1>
+                        <FormattedMessage id={ this.props.header.title }/>
+                    </h1>
+                    <h2>
+                        <FormattedMessage id={ this.props.header.name }/>
+                    </h2>
+                </div>
+            </header>
+        )
+    }
+}
 
 export default Header;

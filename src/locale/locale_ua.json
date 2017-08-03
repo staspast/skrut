@@ -2,11 +2,14 @@
   "title": "У Діда Віктора",
 
 
-  "header.part1": "Lorem Ipsum is simply",
-  "header.part2": "text of the printing and typesetting industry.",
+  "header.title.reviews": "Книга відгуків",
+  "header.title.contact": "Контакти",
+  "header.title.gallery": "Фотогалерея",
+  "header.title.offers": "Апартаменти",
+  "header.title.about-us": "About-us",
+  "header.name": "садиби \"У діда Віктора\"",
 
-
-  "navbar.offers": "Пропозиції",
+  "navbar.offers": "Апартаменти",
   "navbar.contact": "Контакт",
   "navbar.aboutUs": "Про нас",
   "navbar.gallery": "Галерея",
