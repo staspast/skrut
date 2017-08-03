@@ -13,10 +13,7 @@ class Contact extends Component {
             surname: '',
             phone: '',
             email: '',
-            message: '',
-            nameValid: false,
-            emailValid: false,
-            messageValid: false
+            message: ''
         }
     }
 
@@ -55,12 +52,14 @@ class Contact extends Component {
     };
 
     sendEmail = (e) => {
+        console.log('fetch')
         fetch('https://script.google.com/macros/s/AKfycbwcAOuP_lwPBboegRx3dJouQVAdtGQVmL1N28AgO_pKePIsWYTX/exec?name=' +
-            this.state.name + '&mail=' +
-            this.state.surname + '&surname=' +
-            this.state.phone + '&phone=' +
-            this.state.email + '&message=' +
-            this.state.message, {method: 'GET'})
+           this.state.name +
+          '&mail=' + this.state.email +
+          '&message=' + this.state.message,
+          '&surname=' + this.state.surname +
+          '&phone=' + this.state.phone,
+             {method: 'GET'})
             .then((res) => {
                 console.log(res)
             });
@@ -121,7 +120,7 @@ class Contact extends Component {
                         <Col md={6} className="contact__form">
                             <div className="contact__title"><FormattedMessage id="contact.form"/> </div>
 
-                            <Form
+                            <form
                                 onSubmit={ this.sendEmail }
                                 autoComplete="off"
                             >
@@ -189,15 +188,15 @@ class Contact extends Component {
                                         </FormGroup>
                                     </Col>
                                 </Row>
-                            </Form>
+                            </form>
 
-                            <button
+                            <Button
                                 className="pull-right"
                                 disabled={ !this.inputsValid() }
                                 type="submit"
                             >
                                 Send mail
-                            </button>
+                            </Button>
                         </Col>
                     </Row>
                 </Grid>
