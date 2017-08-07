@@ -95,6 +95,7 @@ class Contact extends Component {
             />
           </FormGroup>
 
+          <div className="g-recaptcha" data-sitekey="6Ld1rg0TAAAAAJ8UqLFRrgG027Qlmegmhi9FeIGX"></div>
           <Button type="submit">Submit</Button>
         </form>
       </Row>
