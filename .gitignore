@@ -8,3 +8,7 @@ skrut_frontend/.idea
 /skrut_backend/node_modules/
 /skrut_frontend/node_modules/
 
+.DS_Store
+package-lock.json
+skrut_backend/package-lock.json
+skrut_frontend/package-lock.json
