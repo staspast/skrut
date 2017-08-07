@@ -1,0 +1,43 @@
+.offers {
+  text-align: left;
+
+  &__title {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 10px;
+  }
+
+  &__information {
+    margin: 0 0 15px 15px;
+  }
+
+  .pswp-thumbnail {
+    border: 2px solid #fff;
+    width: 50%;
+
+    @media (min-width: 768px) {
+      width: 25%;
+    }
+
+    &:first-child {
+      @media (min-width: 768px) {
+        width: 50%;
+      }
+
+      @media (min-width: 992px) {
+        width: 75%;
+      }
+    }
+  }
+
+  .nav-tabs > li {
+    text-align: center;
+    width: 50%;
+  }
+
+  .tab-content {
+    margin-top: 20px;
+  }
+}
+
+@import "price/price";

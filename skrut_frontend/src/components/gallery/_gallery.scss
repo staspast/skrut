@@ -1,0 +1,23 @@
+.gallery {
+  &__title {
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .pswp {
+    &-gallery {
+      margin-bottom: 20px;
+    }
+
+    &-thumbnail {
+      border: 2px solid #fff;
+      width: 50%;
+
+      @media (min-width: 576px) {
+        width: 25%;
+      }
+    }
+  }
+}
