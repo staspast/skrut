@@ -73,8 +73,7 @@ function verifyCaptcha (req, callback) {
 }
 
 function captchaVerification (req, res) {
-  console.log(req.body);
   verifyCaptcha(req, function (success) {
-    res.json({success: success});
+    res.jsonp({success: success});
   })
 }
