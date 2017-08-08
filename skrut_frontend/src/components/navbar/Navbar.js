@@ -8,13 +8,13 @@ class NavigationBar extends Component {
     handleSelect = (eventKey) => {
         let locale
         switch (eventKey){
-          case 7:
+          case 1:
             locale = 'ua'
             break
-          case 8:
+          case 2:
             locale = 'en'
             break
-          case 9:
+          case 3:
             locale = 'pl'
             break
         }
@@ -35,19 +35,19 @@ class NavigationBar extends Component {
                     </Navbar.Header>
 
                     <Navbar.Collapse>
-                        <Nav pullRight onSelect={this.handleSelect}>
-                            <NavItem eventKey={1} href="/about-us"><FormattedMessage id="navbar.aboutUs"/></NavItem>
-                            <NavItem eventKey={2} href="/offers"><FormattedMessage id="navbar.offers"/></NavItem>
-                            <NavItem eventKey={3} href="/gallery"><FormattedMessage id="navbar.gallery"/></NavItem>
-                            <NavItem eventKey={4} href="/reviews"><FormattedMessage id="navbar.reviews"/></NavItem>
-                            <NavItem eventKey={5} href="/contact"><FormattedMessage id="navbar.contact"/></NavItem>
+                        <Nav pullRight>
+                            <NavItem href="/about-us"><FormattedMessage id="navbar.aboutUs"/></NavItem>
+                            <NavItem href="/offers"><FormattedMessage id="navbar.offers"/></NavItem>
+                            <NavItem href="/gallery"><FormattedMessage id="navbar.gallery"/></NavItem>
+                            <NavItem href="/reviews"><FormattedMessage id="navbar.reviews"/></NavItem>
+                            <NavItem href="/contact"><FormattedMessage id="navbar.contact"/></NavItem>
 
                             <NavItem>|</NavItem>
 
-                            <NavDropdown eventKey={6} title="Language" id="dropdown">
-                                <MenuItem eventKey={7} >UKR</MenuItem>
-                                <MenuItem eventKey={8} >ENG</MenuItem>
-                                <MenuItem eventKey={9} >POL</MenuItem>
+                            <NavDropdown onSelect={this.handleSelect} title="Language" id="dropdown">
+                                <MenuItem eventKey={1} >UKR</MenuItem>
+                                <MenuItem eventKey={2} >ENG</MenuItem>
+                                <MenuItem eventKey={3} >POL</MenuItem>
                                 {/*<MenuItem eventKey={9}>RUS</MenuItem>*/}
                             </NavDropdown>
 
