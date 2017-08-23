@@ -1,13 +1,13 @@
-import React, {Component} from 'react'
-import {Grid, FormGroup, FormControl, Row, Col, Button, Form} from  'react-bootstrap'
-import {Header} from  '../../components';
-import {Map} from '../../containers';
-import {FormattedMessage} from 'react-intl'
-import Notification from '../notification/Notification'
-import ReCAPTCHA from 'react-google-recaptcha'
+import React, { Component } from 'react';
+import { Grid, FormGroup, FormControl, Row, Col, Button, Form } from  'react-bootstrap';
+import { Header } from  '../../components';
+import { Map } from '../../containers';
+import { FormattedMessage } from 'react-intl';
+import Notification from '../notification/Notification';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const HeaderTitle = {
-    title: "header.title.contact",
+    title: 'header.title.contact',
     name: 'header.name'
 };
 
@@ -26,13 +26,14 @@ class Contact extends Component {
             messageValid: false,
             success: false,
             error: false,
-            visibility: false
+            visibility: false,
+            captchaValid: false
         }
-    }
+    };
 
     toggleClass = () => {
         const currentState = this.state.visibility;
-        this.setState({ visibility: !currentState });
+        this.setState({visibility: !currentState})
     };
 
     validateNotEmpty = (value) => {
@@ -42,11 +43,11 @@ class Contact extends Component {
     validateEmail = (email) => {
         let reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
-        return reg.test(email);
+        return reg.test(email)
     };
 
     inputsValid = () => {
-        return this.validateEmail(this.state.email) && this.validateNotEmpty(this.state.name) && this.validateNotEmpty(this.state.message)
+        return this.validateEmail(this.state.email) && this.validateNotEmpty(this.state.name) && this.validateNotEmpty(this.state.message) && this.state.captchaValid
     };
 
     handleNameChange = (event) => {
@@ -63,42 +64,42 @@ class Contact extends Component {
 
     sendEmail = (e) => {
         this.toggleClass();
+
         fetch('https://script.google.com/macros/s/AKfycbwcAOuP_lwPBboegRx3dJouQVAdtGQVmL1N28AgO_pKePIsWYTX/exec?name=' +
-           this.state.name +
-          '&mail=' + this.state.email +
-          '&message=' + this.state.message,
-          '&surname=' + this.state.surname +
-          '&phone=' + this.state.phone,
-             {method: 'GET'})
+            this.state.name +
+            '&mail=' + this.state.email +
+            '&message=' + this.state.message,
+            '&surname=' + this.state.surname +
+            '&phone=' + this.state.phone,
+            {method: 'GET'})
             .then((res) => {
-                if(res.status === 200) {
-                    this.setState({ success: true });
-                    this.toggleClass();
+                if (res.status === 200) {
+                    this.setState({success: true});
+                    this.toggleClass()
                 } else {
-                    this.setState({ error: true });
+                    this.setState({error: true})
                 }
 
-                this.setState({ success: false });
+                this.setState({success: false})
             });
 
         e.preventDefault()
     };
 
-    onChange = (value) =>{
+    onChange = (value) => {
+        let data = { recaptcha: value };
 
-      fetch("http://localhost:8080/api/captcha",
-        {
-          method: "POST",
-          mode: "no-cors",
-          header: {
-            "Content-Type": "application/json"
-          },
-          body: {recaptcha: value}
-        })
-        .then((res) => {
-          console.log(res);
-        })
-    }
+        fetch('http://localhost:8080/api/captcha',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json', 'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(res => res.json())
+            .then(res => this.setState({captchaValid: res.success}))
+    };
 
     render() {
         return (
@@ -116,16 +117,16 @@ class Contact extends Component {
                                 <span><FormattedMessage id="contact.fillForm"/></span>
                             </div>
 
-                            <h4><FormattedMessage id="contact.name"/> </h4>
+                            <h4><FormattedMessage id="contact.name"/></h4>
 
                             <Row className="contact__address">
                                 <Col xs={4}>
                                     <FormattedMessage id="contact.address"/>
                                 </Col>
                                 <Col xs={8}>
-                                    <div><FormattedMessage id="contact.street"/> </div>
-                                    <div><FormattedMessage id="contact.town"/> </div>
-                                    <div><FormattedMessage id="contact.region"/> </div>
+                                    <div><FormattedMessage id="contact.street"/></div>
+                                    <div><FormattedMessage id="contact.town"/></div>
+                                    <div><FormattedMessage id="contact.region"/></div>
                                 </Col>
                             </Row>
 
@@ -151,7 +152,7 @@ class Contact extends Component {
                         </Col>
 
                         <Col md={6} className="form form__custom">
-                            <div className="contact__title"><FormattedMessage id="contact.form"/> </div>
+                            <div className="contact__title"><FormattedMessage id="contact.form"/></div>
 
                             <Form
                                 onSubmit={ this.sendEmail }
@@ -215,15 +216,16 @@ class Contact extends Component {
                                     </Col>
                                 </Row>
 
-                                <Row className={ this.state.visibility ? 'hide__button': null } >
+                                <Row className={ this.state.visibility ? 'hide__button' : null }>
                                     <Col xs={12}>
                                         <script src='https://www.google.com/recaptcha/api.js' async></script>
 
                                         <ReCAPTCHA
-                                          ref="recaptcha"
-                                          sitekey="6Ld1rg0TAAAAAJ8UqLFRrgG027Qlmegmhi9FeIGX"
-                                          onChange={this.onChange}
-                                        />,
+                                            ref="recaptcha"
+                                            sitekey="6Ld1rg0TAAAAAJ8UqLFRrgG027Qlmegmhi9FeIGX"
+                                            onChange={this.onChange}
+                                        />
+
                                         <button
                                             className="button pull-right"
                                             disabled={ !this.inputsValid() }
@@ -250,4 +252,4 @@ class Contact extends Component {
     }
 }
 
-export default Contact
+export default Contact;
