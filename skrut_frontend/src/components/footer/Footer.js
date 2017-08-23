@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Row, Col } from  'react-bootstrap';
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 const Footer = () =>
     <footer className="footer">
