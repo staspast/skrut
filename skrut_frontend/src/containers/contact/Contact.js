@@ -230,11 +230,14 @@ class Contact extends Component {
                                         <script src='https://www.google.com/recaptcha/api.js' async></script>
 
                                         <ReCAPTCHA
+                                            className="recaptcha pull-right"
                                             ref="recaptcha"
                                             sitekey="6Ld1rg0TAAAAAJ8UqLFRrgG027Qlmegmhi9FeIGX"
                                             onChange={this.onChange}
                                         />
+                                    </Col>
 
+                                    <Col xs={12}>
                                         <button
                                             className="button pull-right"
                                             disabled={ !this.inputsValid() }

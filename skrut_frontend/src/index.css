@@ -374,8 +374,8 @@ video {
 
 .reviews__page {
   border: 1px solid #e7e7e7;
-  padding: 30px 20px;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  padding: 30px 20px; }
   @media (max-width: 767px) {
     .reviews__page {
       display: table; } }
@@ -397,12 +397,12 @@ video {
     transform: rotate(180deg); }
 
 .reviews__date {
-  text-align: left;
   font-size: 16px;
   font-weight: 500;
+  margin-bottom: 20px;
   position: relative;
-  text-transform: uppercase;
-  margin-bottom: 20px; }
+  text-align: left;
+  text-transform: uppercase; }
   @media (min-width: 768px) {
     .reviews__date {
       text-align: center;
@@ -515,3 +515,5 @@ video {
     margin: 20px 0; }
   .contact .hide__button {
     visibility: hidden; }
+  .contact .recaptcha {
+    margin-bottom: 10px; }
