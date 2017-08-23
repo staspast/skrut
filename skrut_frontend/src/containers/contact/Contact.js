@@ -27,6 +27,7 @@ class Contact extends Component {
             success: false,
             error: false,
             visibility: false,
+            submitted: false,
             captchaValid: false
         }
     };
@@ -65,22 +66,30 @@ class Contact extends Component {
     sendEmail = (e) => {
         this.toggleClass();
 
-        fetch('https://script.google.com/macros/s/AKfycbwcAOuP_lwPBboegRx3dJouQVAdtGQVmL1N28AgO_pKePIsWYTX/exec?name=' +
-            this.state.name +
+        fetch('https://script.google.com/macros/s/AKfycbwcAOuP_lwPBboegRx3dJouQVAdtGQVmL1N28AgO_pKePIsWYTX/exec?' +
+            'name=' + this.state.name +
             '&mail=' + this.state.email +
-            '&message=' + this.state.message,
+            '&message=' + this.state.message +
             '&surname=' + this.state.surname +
             '&phone=' + this.state.phone,
-            {method: 'GET'})
+            { method: 'GET' })
             .then((res) => {
-                if (res.status === 200) {
-                    this.setState({success: true});
-                    this.toggleClass()
+                if(res.status === 200) {
+                    this.setState({ success: true, submitted: true, });
+                    this.toggleClass();
                 } else {
-                    this.setState({error: true})
+                    this.setState({ error: true, submitted: true, });
                 }
 
-                this.setState({success: false})
+                this.setState({
+                    success: false,
+                    name: '',
+                    surname: '',
+                    phone: '',
+                    email: '',
+                    message: '',
+                    submitted: false,
+                });
             });
 
         e.preventDefault()
@@ -245,6 +254,7 @@ class Contact extends Component {
                 <Notification
                     success={ this.state.success }
                     error={ this.state.error }
+                    submitted={ this.state.submitted }
                 />
 
             </div>
