@@ -13,18 +13,18 @@ var app = express();
 var cors = require('cors');
 
 var corsOptions = {
-    origin: 'http://localhost:3000',
-    optionsSuccessStatus: 200
+  origin: 'http://localhost:3000',
+  optionsSuccessStatus: 200
 };
 
 app.use(cors(corsOptions));
 
 app.use(logger('dev'));
 app.use(bodyParser.json({
-    type: "*/*"
+  type: "*/*"
 }));
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
