@@ -14,6 +14,25 @@ const HeaderTitle = {
 };
 
 class Reviews extends Component {
+    constructor() {
+        super();
+
+        this.state = {
+            comments: []
+        };
+
+        this.getReviews();
+    }
+
+    getReviews = () => {
+        fetch('http://localhost:8080/api/comments',
+            {
+                method: 'GET',
+            })
+            .then(res => res.json())
+            .then(res => { this.setState({ comments: res.data }) })
+    };
+
     render() {
         return (
             <div className="reviews">
@@ -30,27 +49,26 @@ class Reviews extends Component {
                     </Row>
 
                     <Row>
-                        <Col xs={12}>
-                            <div className="reviews__page">
-                                <div className="reviews__data">
-                                    <div className="reviews__data--name">Andriy Spas</div>
-                                    <div className="reviews__data--city">Lviv</div>
-                                    <div className="reviews__data--description">
-                                        Lorem Ipsum is simply text of the printing and typesetting industry is simply text
-                                        of the printing and typesetting industry. Lorem Ipsum is simply text of the printing and typesetting
-                                        industry is simply text of the printing and typesetting industry. Lorem Ipsum is simply text of the
-                                        printing and typesetting industry is simply text of
-                                        the printing and typesetting industry.
+                        {
+                            this.state.comments.length !== 0 &&  this.state.comments.map((item, index) => (
+                            <Col xs={12}>
+                                <div className="reviews__page">
+                                    <div className="reviews__data">
+                                        <div className="reviews__data--name">{ item.name }</div>
+                                        <div className="reviews__data--city">{ item.city }</div>
+                                        <div className="reviews__data--description">{ item.message }</div>
+                                    </div>
+
+                                    <div className="reviews__date">
+                                        { item.date_post }
+                                        <div className="reviews__date--day">12</div>
+                                        <div className="reviews__date--month">July</div>
+                                        <div className="reviews__date--year">2017</div>
                                     </div>
                                 </div>
-
-                                <div className="reviews__date">
-                                    <div className="reviews__date--day">12</div>
-                                    <div className="reviews__date--month">July</div>
-                                    <div className="reviews__date--year">2017</div>
-                                </div>
-                            </div>
-                        </Col>
+                            </Col>
+                            ))
+                        }
                     </Row>
                 </Grid>
             </div>
