@@ -1,14 +1,59 @@
 import React, {Component} from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 import {Modal, Form, FormGroup, FormControl, Row, Col} from  'react-bootstrap';
 
 class ModalStructure extends Component {
-    constructor(){
+    constructor() {
         super();
 
         this.state = {
-            show: false
+            captchaValue: '',
+            name: '',
+            city: '',
+            message: ''
         }
-    }
+    };
+
+    validateField = (value) => {
+        return value !== '' && value !== undefined;
+    };
+
+    fieldValid = () => {
+        return this.validateField(this.state.name) && this.validateField(this.state.message) && this.state.captchaValue
+    };
+
+    handleNameChange = (event) => {
+        this.setState({name: event.target.value})
+    };
+
+    handleMessageChange = (event) => {
+        this.setState({message: event.target.value})
+    };
+
+    onChange = (value) => {
+        this.setState({captchaValue: value});
+    };
+
+    submitReview = () => {
+        let data = {
+            name: this.state.name,
+            city: this.state.city,
+            message: this.state.message,
+            date_post: new Date(),
+            recaptcha: this.state.captchaValue
+        };
+
+        fetch('http://localhost:8080/api/comments',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json', 'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(res => res.json())
+            .then(res => this.setState({ captchaValue: res.success }))
+    };
 
     close = () => {
         this.setState({ show: false });
@@ -33,19 +78,20 @@ class ModalStructure extends Component {
                     </Modal.Header>
 
                     <Modal.Body className="clearfix form">
-                        <Form autoComplete="off">
+                        <Form autoComplete="off" onSubmit={ this.submitReview }>
                             <Row>
-                                <Col xs={6}>
-                                    <FormGroup controlId="nameText">
+                                <Col xs={12}>
+                                    <FormGroup controlId="name">
                                         <FormControl
                                             type="text"
-                                            placeholder="Name"
+                                            placeholder="Full name"
+                                            onChange={ this.handleNameChange }
                                         />
                                     </FormGroup>
                                 </Col>
 
-                                <Col xs={6}>
-                                    <FormGroup controlId="cityText">
+                                <Col xs={12}>
+                                    <FormGroup controlId="city">
 
                                         <FormControl
                                             type="text"
@@ -55,21 +101,41 @@ class ModalStructure extends Component {
                                 </Col>
 
                                 <Col xs={12}>
-                                    <FormGroup controlId="messageText">
+                                    <FormGroup controlId="message">
                                         <FormControl
                                             componentClass="textarea"
                                             placeholder="Message"
+                                            onChange={ this.handleMessageChange }
                                         />
                                     </FormGroup>
                                 </Col>
                             </Row>
 
-                            <button
-                                className="button pull-right"
-                                type="submit"
-                            >
-                                Send review
-                            </button>
+                            <Row>
+                                <Col xs={12}>
+                                    <ReCAPTCHA
+                                        className="pull-right recaptcha"
+                                        ref="recaptcha"
+                                        sitekey="6LePfiwUAAAAAMtjzN666LlPkICwKkf4gaM_MQp9"
+                                        onChange={ this.onChange }
+                                    />
+
+                                </Col>
+                            </Row>
+
+                            <Row>
+                                <Col xs={12}>
+                                    <button
+                                        className="button pull-right"
+                                        type="submit"
+                                        disabled={ !this.fieldValid() }
+                                    >
+                                        Send review
+                                    </button>
+
+                                </Col>
+                            </Row>
+
                         </Form>
                     </Modal.Body>
 
