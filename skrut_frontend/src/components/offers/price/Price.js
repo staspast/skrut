@@ -1,39 +1,40 @@
 import React from 'react';
 import {Table} from  'react-bootstrap';
+import {FormattedMessage} from 'react-intl'
 
 const PriceInformation = () =>
     <div className="price">
-        <div className="price__title">Вартість проживання</div>
+        <div className="price__title"><FormattedMessage id="offer.price.title"/></div>
 
         <div className="price__description">
-            Вартість проживання буде залежати як від сезону так і від тривалості перебування у нас. Орієнтовні ціни наводимо
-            нижче, але обов'язко сконтактуйте з нами для уточнення. Орієнтовні ціни на проживання за номер грн.
+            <FormattedMessage id="offer.price.desc"/>
+
         </div>
 
         <Table striped bordered condensed hover>
             <thead>
                 <tr>
-                    <th>Період</th>
-                    <th>З 2 осіб</th>
-                    <th>З 4 осіб</th>
-                    <th>До 8 осіб</th>
+                    <th><FormattedMessage id="offer.price.period"/></th>
+                    <th><FormattedMessage id="offer.price.two"/></th>
+                    <th><FormattedMessage id="offer.price.four"/></th>
+                    <th><FormattedMessage id="offer.price.eight"/></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Новорічний (28.12 - 10.01)</td>
-                    <td>За домовл.</td>
-                    <td>За домовл.</td>
-                    <td>За домовл.</td>
+                    <td><FormattedMessage id="offer.price.new_year"/></td>
+                    <td><FormattedMessage id="offer.price.neg"/></td>
+                    <td><FormattedMessage id="offer.price.neg"/></td>
+                    <td><FormattedMessage id="offer.price.neg"/></td>
                 </tr>
                 <tr>
-                    <td>Літній</td>
+                    <td><FormattedMessage id="offer.price.summer"/></td>
                     <td>400</td>
                     <td>600</td>
                     <td> - </td>
                 </tr>
                 <tr>
-                    <td>Зимовий</td>
+                    <td><FormattedMessage id="offer.price.winter"/></td>
                     <td>350</td>
                     <td>500</td>
                     <td>-</td>

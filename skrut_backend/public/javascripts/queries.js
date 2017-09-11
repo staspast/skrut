@@ -33,9 +33,12 @@ function getAllComments (req, res, next) {
 }
 
 function createComment (req, res, next) {
+  console.log(req);
   verifyCaptcha(req, function (success) {
+    console.log(success);
     if (success) {
-      db.none('insert into comments(name, message, date_posted, city_from)' +
+    console.log('If worked');
+    db.none('insert into comments(name, message, date_posted, city_from)' +
         'values(${name}, ${message}, ${date_posted}, ${city_from})',
         req.body)
         .then(function () {

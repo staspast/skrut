@@ -19,7 +19,7 @@ class Offers extends Component {
 
                 <Grid>
                     <Tabs defaultActiveKey={1} id="offers__tabs">
-                        <Tab eventKey={1} title="Перший номер">
+                        <Tab eventKey={1} title={(<FormattedMessage id="offer.first.name"/>)}>
                             <Row>
                                 <Col md={5}>
                                     <div className="offers-title"><FormattedMessage id="offer.first.name"/></div>
@@ -41,17 +41,17 @@ class Offers extends Component {
                                             <li><FormattedMessage id="offer.first.hairdryer"/></li>
                                         </ul>
 
-                                        <div>За потребою :</div>
+                                        <div><FormattedMessage id="offer.ifNeeded"/></div>
                                         <ul>
-                                            <li>Господарі нададуть Вам у користування вітальню</li>
+                                            <li><FormattedMessage id="offer.livingRoom"/></li>
                                             <li>
                                                 <div>
-                                                    <span>Можна rористуватися кухнею господарів</span>
+                                                    <span><FormattedMessage id="offer.kitchen"/></span>
                                                     <ul>
-                                                        <li>газова плитка</li>
-                                                        <li>мікрохвильова піч</li>
-                                                        <li>морозильна камера</li>
-                                                        <li>посуд</li>
+                                                        <li><FormattedMessage id="offer.stove"/></li>
+                                                        <li><FormattedMessage id="offer.microwave"/></li>
+                                                        <li><FormattedMessage id="offer.fridge"/></li>
+                                                        <li><FormattedMessage id="offer.dishes"/></li>
                                                     </ul>
                                                 </div>
                                             </li>
@@ -64,7 +64,7 @@ class Offers extends Component {
                                 </Col>
                             </Row>
                         </Tab>
-                        <Tab eventKey={2} title="Другий номер">
+                        <Tab eventKey={2} title={(<FormattedMessage id="offer.second.name"/>)}>
                             <Row>
                                 <Col md={5}>
                                     <div><FormattedMessage id="offer.second.name"/></div>
@@ -86,17 +86,17 @@ class Offers extends Component {
                                             <li><FormattedMessage id="offer.second.hairdryer"/></li>
                                         </ul>
 
-                                        <div>За потребою :</div>
+                                        <div><FormattedMessage id="offer.ifNeeded"/></div>
                                         <ul>
-                                            <li>Господарі нададуть Вам у користування вітальню</li>
+                                            <li><FormattedMessage id="offer.livingRoom"/></li>
                                             <li>
                                                 <div>
-                                                    <span>Можна rористуватися кухнею господарів</span>
+                                                    <span><FormattedMessage id="offer.kitchen"/></span>
                                                     <ul>
-                                                        <li>газова плитка</li>
-                                                        <li>мікрохвильова піч</li>
-                                                        <li>морозильна камера</li>
-                                                        <li>посуд</li>
+                                                        <li><FormattedMessage id="offer.stove"/></li>
+                                                        <li><FormattedMessage id="offer.microwave"/></li>
+                                                        <li><FormattedMessage id="offer.fridge"/></li>
+                                                        <li><FormattedMessage id="offer.dishes"/></li>
                                                     </ul>
                                                 </div>
                                             </li>

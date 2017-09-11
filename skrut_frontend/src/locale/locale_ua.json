@@ -1,12 +1,15 @@
 {
   "title": "У Діда Віктора",
 
+  "home.title": "Садиба \"У діда Віктора\"",
+  "home.desc": "незабутній відпочинок у Карпатах",
+
 
   "header.title.reviews": "Книга відгуків",
   "header.title.contact": "Контакти",
   "header.title.gallery": "Фотогалерея",
   "header.title.offers": "Апартаменти",
-  "header.title.about-us": "About-us",
+  "header.title.about-us": "Про нас",
   "header.name": "садиби \"У діда Віктора\"",
 
   "navbar.offers": "Апартаменти",
@@ -42,6 +45,13 @@
   "contact.form": "Сконтактуйтесь з нами",
   "contact.phone": "Телефон",
 
+  "offer.ifNeeded": "За потребою :",
+  "offer.livingRoom": "Господарі нададуть Вам у користування вітальню",
+  "offer.kitchen": "Можна користуватися кухнею господарів",
+  "offer.stove": "газова плитка",
+  "offer.microwave": "мікрохвильова піч",
+  "offer.fridge": "морозильна камера",
+  "offer.dishes": "посуд",
 
   "offer.first.name": "Перший номер",
   "offer.info": "Інформація про номер:",
@@ -68,12 +78,26 @@
   "offer.second.bed": "Велике дерев`яне ліжко 2.00x1.80",
   "offer.second.hairdryer": "фен",
 
+  "offer.price.title": "Вартість проживання",
+  "offer.price.desc": "Вартість проживання буде залежати як від сезону так і від тривалості перебування у нас. Орієнтовні ціни наводимо нижче, але обов'язко сконтактуйте з нами для уточнення. Орієнтовні ціни на проживання за номер грн.",
+  "offer.price.period": "Період",
+  "offer.price.two": "З 2 осіб",
+  "offer.price.four": "З 4 осіб",
+  "offer.price.eight": "До 8 осіб",
+  "offer.price.new_year": "Новорічний (28.12 - 10.01)",
+  "offer.price.neg": "За домовл.",
+  "offer.price.summer": "Літній",
+  "offer.price.winter": "Зимовий",
+
 
   "tile.header1": "Відпочинок у Карпатах - зимовий та літній",
   "tile.header2": "Чисте настояне на смерекових лісах повітря. Кришталеві води гірських потоків. Прекрасна природа карпатських гір. Самобутня культура гуцулів. Активний відпочинок. Щира гостинність",
   "tile.header3": "Все з переліку Яремче пропонує своїм гостям. Вам лише потрібно знайти пристойне комфортне житло, щоб з приємністю провести відпочинок у Карпатах.",
   "tile.header4": "Ознайомтеся з нашими умовами для проживання та підберіть для себе програму відпочинку в Карпатах.",
 
+  "reviews.desc": "Будемо раді, якщо Ви поділитеся своїми враженнями про свій відпочинок.",
+  "reviews.add": "Додати відгук",
+  "reviews.title": "Відгуки наших гостей",
 
   "footer.desc": "Lorem Ipsum is simply text of the printing and typesetting industry is simply text of the printing and typesetting industry."
 

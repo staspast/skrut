@@ -1,16 +1,17 @@
 import React from 'react';
 import Tile from './tile/Tile';
 import Video from './video/Video';
+import {FormattedMessage} from 'react-intl'
 
 const Home = () =>
     <section>
         <div className="home">
             <div className="header__title">
                 <h1>
-                    Садиба "У діда Віктора"
+                  <FormattedMessage id="home.title"/>
                 </h1>
                 <h2>
-                    незабутній відпочинок у Карпатах
+                  <FormattedMessage id="home.desc"/>
                 </h2>
             </div>
 
