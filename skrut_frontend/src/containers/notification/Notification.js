@@ -2,40 +2,46 @@ import React, {Component} from 'react';
 import NotificationSystem from 'react-notification-system';
 
 class Notification extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
-        this.state = {
-            notificationSystem: null
-        }
+        this._notificationSystem = null;
+    }
+
+    componentDidMount() {
+        this._notificationSystem = this.refs.notificationSystem;
     }
 
     addNotification = (level, message) => {
-        this.state.notificationSystem.addNotification({
+        this._notificationSystem.addNotification({
             message: message,
             level: level
         });
     };
 
     componentWillReceiveProps(nextProps) {
+        if (nextProps.submitted === this.props.submitted) {
+            return;
+        }
+
         if (nextProps.success === true) {
-            let message = 'success';
+            let message = 'Your message has been successfully sent. We will contact you very soon!';
             this.addNotification('success', message);
         }
 
         if (nextProps.error === true) {
             let message = 'error';
-            this.addNotification('error', message);
+            this.addNotification('Failed to send your message. Please try later or contact administrator by other way.', message);
         }
-    }
+    };
 
     render() {
         return (
             <div>
-                <NotificationSystem ref={ n => this.state.notificationSystem = n } />
+                <NotificationSystem ref="notificationSystem"/>
             </div>
         );
-    }
+    };
 }
 
 export default Notification;

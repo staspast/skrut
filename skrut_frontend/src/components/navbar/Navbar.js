@@ -1,25 +1,27 @@
-import React, {Component} from 'react';
-import {Navbar, NavItem, NavDropdown, MenuItem, Nav, OverlayTrigger} from  'react-bootstrap';
+import React, { Component } from 'react';
+import { Navbar, NavItem, NavDropdown, MenuItem, Nav, OverlayTrigger } from  'react-bootstrap';
 import PopoverPhone from './popover/Popover';
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 class NavigationBar extends Component {
 
     handleSelect = (eventKey) => {
-        let locale
-        switch (eventKey){
-          case 1:
-            locale = 'ua'
-            break
-          case 2:
-            locale = 'en'
-            break
-          case 3:
-            locale = 'pl'
-            break
+        let locale;
+
+        switch (eventKey) {
+            case 1:
+                locale = 'ua';
+                break;
+            case 2:
+                locale = 'en';
+                break;
+            case 3:
+                locale = 'pl';
+                break;
         }
-        this.props.onLanguageChange(locale)
-    }
+
+        this.props.onLanguageChange(locale);
+    };
 
     render() {
         return (
@@ -45,9 +47,9 @@ class NavigationBar extends Component {
                             <NavItem>|</NavItem>
 
                             <NavDropdown onSelect={this.handleSelect} title="Language" id="dropdown">
-                                <MenuItem eventKey={1} >UKR</MenuItem>
-                                <MenuItem eventKey={2} >ENG</MenuItem>
-                                <MenuItem eventKey={3} >POL</MenuItem>
+                                <MenuItem eventKey={1}>UKR</MenuItem>
+                                <MenuItem eventKey={2}>ENG</MenuItem>
+                                <MenuItem eventKey={3}>POL</MenuItem>
                                 {/*<MenuItem eventKey={9}>RUS</MenuItem>*/}
                             </NavDropdown>
 
