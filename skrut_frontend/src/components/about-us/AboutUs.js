@@ -44,7 +44,7 @@ class AboutUs extends Component {
             <Row>
               <Col xs={12} className="about-us__image">
                 <img
-                    src="http://media.istockphoto.com/photos/carpathian-mountains-yaremche-ivanofrankivska-oblast-ukraine-mountain-picture-id641062512"
+                    src={require('../../images/river1.jpg')}
                     alt=""/>
               </Col>
             </Row>
@@ -75,7 +75,7 @@ class AboutUs extends Component {
 
               <Col xs={12} sm={6} className="about-us__image">
                 <img
-                    src="http://media.istockphoto.com/photos/carpathian-mountains-yaremche-ivanofrankivska-oblast-ukraine-mountain-picture-id641062512"
+                  src={require('../../images/river2.jpg')}
                     alt=""/>
               </Col>
             </Row>
@@ -102,7 +102,7 @@ class AboutUs extends Component {
               <Col xs={12} sm={6} smPull={6}>
                 <div className="about-us__image">
                   <img
-                      src="http://media.istockphoto.com/photos/carpathian-mountains-yaremche-ivanofrankivska-oblast-ukraine-mountain-picture-id641062512"
+                    src={require('../../images/rock1.jpg')}
                       alt=""/>
                 </div>
               </Col>

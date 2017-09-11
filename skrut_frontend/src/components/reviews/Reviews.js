@@ -11,7 +11,7 @@ const Description = {
 
 const HeaderTitle = {
     title: "header.title.reviews",
-    name: 'header.name.reviews'
+    name: 'header.name'
 };
 
 class Reviews extends Component {

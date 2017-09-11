@@ -1,5 +1,6 @@
 import React from 'react';
 import {Grid, Row, Col} from  'react-bootstrap';
+import { FormattedMessage } from 'react-intl'
 
 const Tile = () =>
     <div className="tile__wrapper">
@@ -7,47 +8,43 @@ const Tile = () =>
             <Row>
                 <Col xs={12} sm={8} className="tile tile__large">
                     <img
-                        src="http://media.istockphoto.com/photos/carpathian-mountains-yaremche-ivanofrankivska-oblast-ukraine-mountain-picture-id641062514"
+                        src={require('../../../images/rock2.jpg')}
                         alt=""/>
                 </Col>
                 <Col xs={12} sm={4} className="tile tile__small">
-                    <div>Відпочинок у Карпатах - зимовий та літній</div>
+                    <div><FormattedMessage id="tile.header1"/></div>
                 </Col>
 
                 <Col sm={8} xs={12} smPush={4} className="tile tile__large">
                     <img
-                        src="http://media.istockphoto.com/photos/carpathian-mountains-yaremche-ivanofrankivska-oblast-ukraine-mountain-picture-id641062512"
+                        src={require('../../../images/rock3.jpg')}
                         alt=""/>
                 </Col>
                 <Col sm={4} xs={12} smPull={8} className="tile tile__small">
                     <div>
-                        Чисте настояне на смерекових лісах повітря. Кришталеві води гірських потоків. Прекрасна природа
-                        карпатських гір.
-                        Самобутня культура гуцулів. Активний відпочинок. Щира гостинність
+                        <FormattedMessage id="tile.header2"/>
                     </div>
                 </Col>
 
                 <Col sm={8} xs={12} className="tile tile__large">
                     <img
-                        src="http://media.istockphoto.com/photos/carpathian-mountains-yaremche-ivanofrankivska-oblast-ukraine-mountain-picture-id641062514"
+                        src={require('../../../images/river1.jpg')}
                         alt=""/>
                 </Col>
                 <Col sm={4} xs={12} className="tile tile__small">
                     <div>
-                        Все з переліку Яремче пропонує своїм гостям. Вам лише потрібно знайти пристойне комфортне житло,
-                        щоб з приємністю провести відпочинок у Карпатах.
+                        <FormattedMessage id="tile.header3"/>
                     </div>
                 </Col>
 
                 <Col sm={8} xs={12} smPush={4} className="tile tile__large">
                     <img
-                        src="http://media.istockphoto.com/photos/carpathian-mountains-yaremche-ivanofrankivska-oblast-ukraine-mountain-picture-id641062512"
+                        src={require('../../../images/river2.jpg')}
                         alt=""/>
                 </Col>
                 <Col sm={4} xs={12} smPull={8} className="tile tile__small">
                     <div>
-                        Ознайомтеся з нашими умовами для проживання та підберіть для себе програму відпочинку в
-                        Карпатах.
+                        <FormattedMessage id="tile.header4"/>
                     </div>
                 </Col>
             </Row>
